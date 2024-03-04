@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Links</title>
+</head>
+<body>
+    <h1>Tipos de links</h1>
+    <h2>Links externos</h2>
+        <p>Para criar links usamos a tag A, é obrigatorio colocar o HREF do link.</p>
+        <p>O A da tag vem de Ancora e o HREF é de Referencia Hyper Texto.</p>
+        <p>Sempre que cololocar um link externo não esquecer de usar na tag A, o target _blank e o rel external.</p>
+        <p>O target é alvo, o _blank é para abrir uma nova janela em branco.</p>
+        <p>O rel mostra que o link é do tipo externo.</p>
+        <p>Para mais informções pode Verificar no 
+            <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf"
+            target="_blank" rel="external">GitHub</a> a apostila dessa aula.</p>
+        <p>Veja também o video dessa aula <a href="https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27"
+            target="_blank" rel="external">clicando aqui</a>.</p>
+        <p>Tipos de target são o _blank, _self, _parent, _top e o frame</p>
+    <ol>
+        <li>_blank vai abrir o link em nova janela em branco</li>
+        <li>_self vai abrir o link na janela ou frame atual (padrão)</li>
+        <li>_parent similar ao uso do _top em uma referência à janela mãe</li>
+        <li>_top vai desfazer todos os frames e abrir o destino no navegador completo</li>
+        <li>nome-do-frame caso esteja usando frames, indicar o nome da janela a abrir</li>
+    </ol>
+        <p>O uso de frames é uma técnica quase em desuso, o frame já é uma tag obsoleta.</p>
+    <h2>Links Internos</h2>
+        <p>Para os links Internos não precisa colocar a URL do site basta só o caminho da pagina, basta <br>
+            usar o CTRL + espaço para selecionar a pasta, caso esteja dentro de outra pasta use ../ e você conseguira voltar.</p>
+    <h2>Links para download</h2>
+        <p>Para fazer os downloads além de você colocar o caminho em HREF, ira precisar colocar download e o caminho <br>
+            também precisara informar o tipo do documento ex: type= "application/pdf". </p>
+        <p>Consultar a lista de Media Types para usar corretamente na hora de colocar no codigo. <br>
+            Site para a lista é o <a href="https://www.iana.org/assignments/media-types/media-types.xhtml"
+            target="_blank" rel="external">Iana</a>.</p>
+        <p>Confira o <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf"
+            target="_blank" rel="external">conteúdo</a> do PDF.</p>
+    <ul>
+        <li><a href="../Downloads/livro.pdf" 
+            download="../Downloads/livro.pdf"
+            type="application\pdf">Baixar o PDF da aula de links</a></li>
+        <li><a href="../Downloads/livro.rar" download="../Downloads/livro.rar"
+            type="application/rar">Baixar PDF da aula de links em RAR</a></li>
+    </ul>
+        <a href="ex003.html" target="_self" rel="prev" class="bp">Voltar uma pagina</a>
+        <a href="01index.html" target="_self" rel="prev" class="mp">Pagina Principal</a>
+        <a href="ex005.html" target="_self" rel="next" class="np">Proxima pagina</a>
+</body>
+</html>

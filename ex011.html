@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Bordas</title>
+</head>
+<body>
+    <header class="cabeçalho">
+    <h1>Trabalhando com Bordas e Sombras</h1>
+    <nav class="navegaçao">
+        <a href="ex010.html" target="_self" rel="prev" class="bp">Voltar pagina</a> 
+        <a href="01index.html" target="_self" rel="prev" class="mp">Pagina principal</a>
+        <a href="ex012.html" target="_self" rel="next" class="np">Proxima pagina</a>
+    </nav>
+    </header>
+    <main>
+    <section class="sessao">
+        <article class="artigos">
+            <h2 class="titulos2">Sombras</h2>
+            <p>Ao colocar sombra em alguma caixa sempre usamos a shorthand do box shadow e seus quatro
+            valores. O resultado final é assim <em>box-shadow: 1px 1px 1px black;</em>, vamos ver qual
+            é a ordem dos valores.</p>
+            <ol>
+                <li><strong>Deslocamento</strong> <em>(h-offset)</em>: quato a sombra vai andar para
+                    o lado direito (valores negativos causam deslocamento para a esquerda)</li>
+                <li><strong>Deslocamento vertical</strong> <em>(v-offset)</em>: quanto a sombra vai andar para 
+                    baixo (valores negativos causam deslocamento para cima)</li>
+                <li><strong>Embaçamento</strong> <em>(blur)</em>: quanto a sombra vai se espalhar pelo fundo</li>
+                <li><strong>Cor</strong> <em>(color)</em>: cor da sombra. É possível usar transparência.</li>
+            </ol>
+            <aside>
+                <p>Cuidado! Não exagere no uso de sombras, pois elas podem tornar o seu efeito visual muito
+                    pesado. Evite também usar sombras coloridas. Use cores rgba() para obter uma transparência
+                    que cause efeitos mais suaves.
+                </p>
+            </aside>
+        </article>
+        <article class="artigos">
+            <h2 class="titulos2">Bordas decoradas</h2>
+            <p>As bordas das caixas não precisam ser sempre retangulares e podem ter alguns detalhes
+                especiais. Como as vértices arredondadas ou personalizadas.
+            </p>
+            <h3 class="titulos3">Borda arredondada</h3>
+            <p>Na configuração das vértices usamos uma shorthand <em>border-radius</em>: em vez de
+            colocar cada um dos tamanhos, a ordem da shorthand é acima na esquerda, em cima na direita,
+            em baixo esquerda e baixo direita. Podemos colocar os quatro valores na shorthand mas 
+            também pode colocar só um valor que será aplicado a todos os lados.</p>
+            <p> Exemplo: <br>
+            <em>
+                border-top-left-radius: 10px <br>
+                border-top-right-radius: 10px <br>
+                border--bottom-right-radius: 10px <br>
+                border-bottom-left-radius: 10px
+            </em> <br>
+            </p>
+            <p>Podemos simplificar usando só <em>border-radius</em> que fica assim: <br>
+            <em>border-radius: 10px</em> <br>
+            Também colocar só dois valores <em>border-radius: 10px 30px</em>, os 10 pixel vão ser
+            aplicados na direita em cima e esquerda em baixo, os 30 pixel serão aplicados na 
+            esquerda em cima e direita em baixo. É possível também usar portecentagem como valor.</p>
+            <h3 class="titulos3">Bordas personalizadas</h3>
+            <p>Podemos usar imagens nas bordas, para isso utilizaremos a tag <em>border-image-
+            source('nome do arquivo')</em> e logo na sequencia a tag <em>border-image-repeat:
+            repeat;</em>, com isso a imagem será utilizada em toda borda. Para ajudar pode
+            também usar a tag <em>border-image-slice:</em> que fatiara a imagem, e por fim é
+            recomendado usar a ferramenta DevTools do navegador para auxiliar na configuração,
+            lembrando que ao acertar a configuraçãono DevTools, é obrigatorio passar os parametros
+            para o codigo.</p>
+            <p>Você pode simplificar usando um shorthand <em>border-image: url('') 20 repeat;</em>,
+            não erre a ordem, primeiro source, segundo slice e terceiro repeat. É de suma importancia
+            criar um border normal para depois inserir a personalização, uma dica deixe a cor da borda
+            transparente caso o navegador do visitante não seja compativel.</p>
+        </article>
+    </section>
+    </main>
+</body>
+</html>

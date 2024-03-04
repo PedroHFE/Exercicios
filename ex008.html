@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Tipografia</title>
+</head>
+<body>
+    <h1>Tamanhos de Fontes</h1>
+        <p>Por padrão a W3C recomenda usar a medida px ou em. Noralmente a maioria dos sites, 
+        por padrão, o tamanho da fonte é 16px. Geralmente 1 em é o tamanho de 16px: 1em = 16px.</p>
+    <h2>Medidas Absolutas</h2>
+        <p>As medidas Absolutas não são muito recomendadas, pois a exibição de cada tela 
+        é diferente.</p>
+    <ul>
+        <li>Centímetro (cm)</li>
+        <li>Milímetro (mm)</li>
+        <li>Polegada (in)</li>
+        <li>Pixel (px)</li>
+        <li>Ponto (pt)</li>
+        <li>Paica (pc)</li>
+    </ul>
+    <h2>Medidas Relativas</h2>
+    <ul>
+        <li>Relativo ao tamanho do M (em)</li>
+        <li>Relativo ao tamanho do x (ex)</li>
+        <li>Relativo a fonte configurada no body (rem)</li>
+        <li>Relativo a largura da viewport, view width (vw)</li>
+        <li>Relativo a altura da viewport, view height (vh)</li>
+    </ul>
+    <h2>Pesos da fontes</h2>
+        <p>Não confunda as palvras na hora de escrever o <em>codigo</em>, as mais 
+        comuns de se confundir são Weight (peso), Width (Largura) e height (Altura). 
+        algumas fontes tem mais pesos que outras.</p>
+    <ul>
+        <li>Lighter</li>
+        <li>Normal</li>
+        <li>Bold</li>
+        <li>Bolder</li>
+        <li>Numerica 100 a 900</li>
+    </ul>
+    <h2>Declaração de fontes</h2>
+        <p> Como usamos muito a as tags font-family, font-weight, font-size e font-style. Acaba
+        tomando muito tempo e espaço, por isso podemos abreviar tudo isso em uma unica linha de 
+        codigo. Isso é chamado de <strong>Shorthand</strong>. Atenção usar na ordem correta!.
+        A ordem correta é a segunite font-style -> font-weigth -> font-size -> font-family.</p>
+        <p> O codigo fica assim font: italic bolder 1em 'Work Sans', sans-serif;</p>
+        <p>Não use muitas fontes no seu site, o padrão e mais comum são de 2 a 4 familias 
+        de fontes diferentes. Uma ótima ferramenta é o <a href="https://fonts.google.com/" 
+        target="_blank" rel="external">google fonts</a>. Sempre que for 
+        importar uma fonte do google fonts usar a opção @import no começo de um documento 
+        CSS separado ou logo abaixo do style caso seja CSS interno.</p>
+        <p> Outro site bem util para adquirir fontes externas(gratuitas) é o
+        <a href="https://www.dafont.com/pt/" target="_blank" rel="external">dafont</a>, 
+        sempre é bom lembra de verificar se a fonte tem glifos (acentuação).</p>
+        <p> Ao usar fontes personalizadas utilize a regra @font-face, para melhor organização 
+        faça uma pasta separada, para deixar as fontes.</p>
+    <h2>Tipos de format()</h2>
+    <ul>
+        <li>Opentype (otf)</li>
+        <li>Truetype (ttf)</li>
+        <li>Embedded opentype</li>
+        <li>Truetype att (Apple Advance Typography)</li>
+        <li>Svg</li>
+    </ul>
+    <a href="ex007.html" target="_self" rel="prev" class="bp">Voltar uma pagina</a>
+    <a href="01index.html" target="_self" rel="prev" class="mp">Pagina principal</a>
+    <a href="ex009.html" target="_self" rel="next" class="np">Proxima pagina</a>
+</body>
+</html>

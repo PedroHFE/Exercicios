@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <title>Mídias em HTML 5</title>
+</head>
+<body>
+    <h1>Imagens dinamicas</h1>
+        <p>Tente abrir esse site em vários dispositivos diferentes ou 
+            simplismente aumente e diminua o tamanho do seu navegador.</p>
+        <p>Para as imagens dinamicas usamos a tag SOURCE MEDIA TYPE, por padrão vem MIN. <br>
+            Significa que vai mudar de imagem a partir do minimo da largura, preferivel colocar apartir do <br>
+            maximo de largura(não esqueça de contar os 50px da barra de rolagem).</p> 
+        <p>Na SRCSET não dá para usar o atlho CRTL + ESPAÇO.</p>
+        <picture><!--Vou destivar as imagens para colocar o conteudo dos audios -->
+            <source media="(max-width:750px )" srcset="/Imagens/anao.png" type="image/png">
+            <source media="(max-width:1050px )" srcset="/Imagens/adolecente.png" type="image/png">
+            <img src="/Imagens/adulto.jp" alt="imagem flexível">
+        </picture>
+    <h2>Audios</h2>
+    <h3>Atributos da tag AUDIO</h3>
+    <ul>
+        <li><em>Preload</em> indica se o áudio será pré-carregado ou não, e aceita três valores:</li>
+            <ul>
+                <li><em>Metadat</em> vai carregar apenas as informações sobre o arquivo (tamanho, <br>
+                    tempo, informações de direitos e etc).</li>
+                <li><em>None</em> não vai carregar absolutamente nada até que o usuário clique no <br>
+                botão play ou um script inicie a reprodução.</li>
+                <li><em>Auto</em> (padrão) vai carregar o arquivo de áudio inteiro assim que a página<br>
+                for carregada, mesmo que o usuário nunca aperte o play.</li>
+            </ul>
+        <li><em>Controls vai apresentar o player na tela. Caso não seja colocado na tag &lt;audio&gt;, o <br>
+        controle será transparente e o usuário não poderá com ele.</em></li>
+        <li><em>Autoplay</em> quando inserido, vai iniciar a reprodução do áudio assim que a página for carregada.</li>
+        <li><em>Loop</em> vai fazer com que o áudio seja repetido eternamente assim que termina a sua reprodução.</li>
+    </ul>
+    <h3>Formatos de Audio</h3>
+        <p>Tem vários formatos de audios, alguns deles são o MPEG3 (MP3), WAV, OGG, AIFF, FLAC, MPEG-4,<br> 
+            TTA, PMC, ATRAC, AAC, WMA, ALAC e etc.</p>
+    <ul>
+        <li><abbr title="Moving Picture Experts Group 3">MP3</abbr></li>
+        <p>Um dos tipos de formatos de áudio mais conhecidos, por remover todos os dados sonoros 
+            que existem além do alcance auditivo de pessoas <br> normais,
+            reduzir a qualidade dos sons que não são fáceis de ouvir e
+            comprimir todos os outros dados de áudio da maneira mais eficiente possível.
+        </p>
+        <li><abbr title="Waveform Audio File Format">WAV</abbr></li>
+        <p>Um dos tipos mais comuns de formato de áudio é WAV, geralmente o WAV contém áudios <br>
+            descomprimidos de alta qualidade e pode ser reproduzido pela maioria dos players.
+        </p>
+        <li><abbr title="Derivado de “ogging”, um jargão tirado do jogo “Netrek”">OGG</abbr></li>
+        <p>O OGG, na verdade, é uma espécie de “formato contêiner” feito com o objetivo de facilitar <br>
+            a manipulação e o streaming de material multimídia digital de alta qualidade. Ele engloba <br>
+            uma série de formatos menos conhecidos, como OGV, OGA, OGX, OGM, SPX e OPUS, para <br>
+            facilitar sua reprodução sem a necessidade da instalação de outros plugins.
+        </p>
+        <li><abbr title="Audio Interchange File Format">AIFF</abbr></li>
+        <p>O AIFF foi criado pela Apple em 1988 tendo como base o IFF, formato utilizado nos antigos <br>
+            sistemas Amiga. Ele também é um contêiner para outros tipos de áudio reconhecidos pelo <br>
+            Mac OS e é geralmente reproduzido apenas por sistemas desenvolvidos pela Apple.
+        </p>
+        <li><abbr title="Free Lossless Audio Codec">FLAC</abbr></li>
+        <p>O FLAC pode compactar um arquivo de origem original em até 60% sem perder um único bit de <br>
+            dados. O que é ainda melhor é que FLAC é um dos tipos de formato de áudio de código <br>
+            aberto gratuito , portanto não impõe restrições de propriedade intelectual.
+        </p>
+        <li><abbr title="MPEG-1 Audio Layer 4">MPEG-4</abbr></li>
+        <p>A qualidade dos arquivos M4A é melhor e os tamanhos dos arquivos são menores em <br>
+            comparação aos arquivos MP3. Os arquivos M4A soam melhor que os arquivos MP3 quando <br>
+            codificados na mesma taxa de bits devido a algumas das melhorias feitas no formato.
+        </p>
+        <li><abbr title="Type Tested Assembly">TTA</abbr></li>
+        <p>É um compressor de áudio gratuito e sem perdas em tempo real baseado em filtros de <br>
+            previsão adaptativos. O TTA oferece níveis de compressão adequados, mantendo altas <br>
+            velocidades operacionais.
+        </p>
+        <li><abbr title="Adaptive Transform Acoustic Coding ">ATRAC</abbr></li>
+        <p>ATRAC é um dos tipos de formato de áudio usado por dispositivos eletrônicos Sony, <br>
+            como PlayStation Portable (PSP) e reprodutores de áudio digital <br>
+            Sony, refere-se a vários algoritmos de compressão desenvolvidos pela Sony.
+        </p>
+        <li><abbr title="Advanced Audio Coding">AAC</abbr></li>
+        <p>O algoritmo de compressão usado pelo AAC é muito mais avançado e técnico que o MP3, <br>
+            Embora o MP3 seja um formato mais doméstico, o AAC ainda é amplamente utilizado hoje. <br>
+            Na verdade, é o método de compactação de áudio padrão usado pelo YouTube, Android, <br>
+            iOS, iTunes, laptops Nintendo posteriores e PlayStations posteriores.
+        </p>
+        <li><abbr title="Windows Media Audio ">WMA</abbr></li>
+        <p>O WMA, além de possuir sua versão comprimida com perda de qualidade, também tem um <br>
+            formato lossless. Porém, ele acaba gerando arquivos maiores do que seus concorrentes <br>
+            e ainda conta com o mesmo problema da variante com redução de <br>
+            atributos: apenas plataformas da Microsoft reproduzem a extensão.
+        </p>
+        <li><abbr title="Apple Lossless Audio Codec">ALAC</abbr></li>
+        <p>O ALAC é um formato de arquivo de áudio criado pela Apple para rivalizar com o FLAC. <br>
+            Esse tipo de arquivo é mais pesado que o FLAC, mas, assim como o concorrente, também possui <br>
+            código aberto. Plataformas da Apple, como o iTunes e o iOS, bloqueiam a reprodução do <br>
+            FLAC em favorecimento ao seu próprio tipo de arquivo, que apresenta uma qualidade <br>
+            bastante alta.
+        </p>
+        <li><abbr title="Pulse-Code Modulation">PMC</abbr></li>
+        <p>O PCM é um método usado para representar digitalmente sinais analógicos de áudio. É o <br>
+            formato-padrão usado em CDs, DVDs, nos sistemas de telefonia, na indústria fonográfica <br>
+            e cinematográfica. Nesse tipo de arquivo, a amplitude do sinal analógico é amostrada <br>
+            regularmente em intervalos uniformes (pulsos), e cada amostra é quantizada no valor <br>
+            mais próximo dentro de uma gama de passos digitais.
+        </p>
+    </ul>
+        <p><audio src="../Audios/audioyt.mp3" controls ></audio></p>
+    <h2>Videos</h2>
+    <h2>Formatos de videos</h2>
+        <p>Existem varios formatos de videos os mais usados e suportados pela maioria dos navegaores <br>
+            são: MPEG4, WebM, OOG, FLV, AVCHD, WMV e AVI. 
+        </p>
+    <ul>
+        <li><abbr title="Moving Picture Experts Group 4">MPEG4</abbr></li>
+        <p>O MPEG-4, também conhecido como MP4, é o tipo de arquivo mais comum para vídeos. <br> 
+            O formato MP4 é o formato padrão para vídeos da web porque os vídeos nesse formato <br>
+            são de alta qualidade com tamanhos de arquivo relativamente pequenos.
+        </p>
+        <li><abbr title="Web Methods">WebM</abbr></li>
+        <p>O formato WebM foi desenvolvido pelo Google e lançado em 2019 à medida que o HTML5 <br>
+            cresceu em popularidade. Esse formato de vídeo foi projetado especificamente para a web,<br>
+            mas o maior problema que ele enfrenta é a falta de suporte. Os vídeos WebM têm um <br>
+            tamanho de arquivo extremamente pequeno sem sacrificar muito em termos de qualidade. <br>
+            Infelizmente, o Internet Explorer e o Safari não oferecem suporte para vídeos WebM, a <br>
+            menos que se use plugins adicionais.
+        </p>
+        <li><abbr title="Derivado de “ogging”, um jargão tirado do jogo “Netrek”">OGG</abbr></li>
+        <p>Ogg é um formato livre de encapsulamento de multimédia ou arquivo recipiente orientado <br>
+            a stream que é muito utilizado na internet através de rádios ao vivo e carregamentos <br>
+            de vídeos em que não precisa ter todo o vídeo baixado para começar a vê-lo.
+        </p>
+        <li><abbr title="Flash Video Format">FLV</abbr></li>
+        <p>Houve um momento em que o vídeo Flash (FLV) era o tipo de vídeo mais comum, mas esse <br>
+            não é mais o caso desde que o Flash Player foi descontinuado no final de 2020. O Flash<br>
+            Player não está mais incluído em navegadores populares da web, e qualquer pessoa que <br>
+            tentar reproduzir um vídeo FLV na web verá uma mensagem de erro em vez do vídeo. Ainda <br>
+            é possível usar um reprodutor de vídeo de terceiros para abrir vídeos FLV em seu telefone <br>
+            ou computador, mas não na web.
+        </p>
+        <li><abbr title="Advanced Video Codec High Definition">AVCHD</abbr></li>
+        <p>AVCHD é um formato que foi originalmente desenvolvido pela Sony e Panasonic para <br>
+            filmadoras. Esse formato de arquivo foi projetado para capturar uma versão de alta <br>
+            qualidade de um vídeo diretamente após ele ter sido gravado, dessa forma, tem-se um vídeo<br>
+            de alta resolução que pode ser usado quando estiver pronto para editar seu vídeo. <br>
+            Embora os vídeos AVCHD geralmente ofereçam uma qualidade ligeiramente maior do que os <br>
+            vídeos MP4.
+        </p>
+        <li><abbr title="Windows Media Video">WMV</abbr></li>
+        <p>WMV, ou Windows Media Video, é um formato de vídeo desenvolvido pela Microsoft para uso<br>
+            com os sistemas operacionais Windows. Como o WMV foi criado para dispositivos Windows,<br>
+            os Apple e Linux normalmente não oferecem suporte imediato para reprodução de WMV. <br>
+            No entanto, os arquivos WMV oferecem excelente qualidade com pequenos tamanhos de arquivo.
+        </p>
+        <li><abbr title="Audio Video Interleave">AVI</abbr></li>
+        <p>Os arquivos AVI são únicos porque oferecem áudio de qualidade muito alta, que é um <br>
+            recurso não encontrado em alguns dos outros tipos de vídeo. Como os arquivos AVI <br> o
+            ferecem excelente qualidade de vídeo e áudio, os tamanhos dos arquivos são normalmente <br>
+            muito maiores. Essa é uma preocupação ainda maior quando você está usando arquivos AVI <br>
+            sem perdas que não foram compactados; não é preciso decodificar esses arquivos para <br>
+            assistir ao vídeo, mas cada minuto dos resultados do vídeo ocupa gigabytes de espaço.
+        </p>
+        <li><abbr title="Moving Video 4 (MEPG4)">M4V</abbr></li>
+        <p>Arquivos M4V foram desenvolvidos pela Apple e funcionam de forma semelhante aos arquivos MP4. <br>
+            Os arquivos M4V protegidos por DRM podem ser reproduzidos no iTunes e no QuickTime player, com <br>
+            boa qualidade. No entanto, se o arquivo M4V não estiver protegido por DRM, ele poderá ser <br>
+            reproduzido em vários reprodutores de vídeo.A extensão de arquivo M4V refere-se ao tipo de <br>
+            arquivo de contêiner de vídeo MPEG-4.
+        </p>
+    </ul>
+    <h2>Compatibilidade</h2>
+    <ul>
+    <h3>Navegadores</h3>
+        <li>Microsoft Edge - .mp4 .m4v</li>          
+        <li>Apple Safari - .mp4 .m4v</li>
+        <li>Google Chorme - .mp4 .m4v .webm .ogv</li>
+        <li>Mozilla Firefox - .webm .ogv</li>
+        <li>Opera - webm .ogv</li>
+    </ul>
+    <h2>Vídeos</h2>
+    <h3>Videos hospedados localmente</h3>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <video width="500px" poster="../Imagens/fire.jpg" controls>
+        <source src="../videos/fogo w.webm" type="video/webm">
+        <source src="../videos/fogo.mp4" type="video/mp4">
+        <p>Seu navegador não tem Compatibilidade com reprodução de videos. </p>
+    </video>
+    <p>Vídeos hospedados localmente consomem muita banda do cliente.</p>
+    <h3>Vídeos hospedados extremamente</h3>
+    <p>Para colocar videos do YouTube ou Vimeo no seu site é simples, basta ir no video, <br>
+        clicar em compartilhar e ir na opção incorporar. Quando você fizer isso o proprio <br>
+        site vai montar um codigo HTML5 só para colar e usar.
+    </p>
+    <p>Estes videos estão hospedados externamnete no YouTube e no Vimeo.</p>
+    <P>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/eoY1Mc70uTo?si=u8LYa1VFYPhwy50U"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+        encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/58281021?h=48af2a4a6d&portrait=0" width="640" height="360"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+        </iframe>
+    </P>
+        <a href="ex004.html" target="_self" rel="prev" class="bp">Voltar uma pagina</a>
+        <a href="01index.html" target="_self" rel="prev" class="mp">Pagina Principal</a>
+        <a href="ex006.html" target="_self" rel="prev" class="np">Proxima pagina</a>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Modelo de Caixas</title>
+</head>
+<body>
+    <h1>Box Model</h1>
+        <p>Box model (modelo de caixa) basicamente é um conceito muito usado e aplicado a grande maioria dos
+        elementos <abbr title="Hyper Text Markup Language">HTML</abbr> que são usadas num site, pois é 
+        semelhante as caixas. Elas são <em>containers</em> que armazenam conteúdos ou até mesmo outras caixas.</p>
+    <h2>Anatomia de uma caixa</h2>
+        <p>Vamos analisar como uma caixa vai ser apresentada por todos os navegadores. Olhe atentamente o
+        diagrama a seguir, que é exatamente o já citado <strong>modelo de caixa</strong>.</p>
+        <img src="../Imagens/boxmodel.jpg" alt="ilustrasao">
+    <h3>Conteúdo</h3>
+        <p>Tudo começa a partir do conteúdo(<em>content</em>), que reprentamos acima com bla bla bla... Por
+        padrão, toda caixa é composta apenas pelo contéudo e não possui <em>padding</em>, nem <em>border</em>, nem
+        <em>outline</em> e nem <em>margin</em>. Uma exceção curiosa é o elemento &lt;<em>body</em>&gt; que
+        já vem com uma <em>margin</em> de 8px.
+        </p>
+    <h3>Largura e Altura</h3>
+        <p>Todo conteúdo possui uma <strong>largura</strong><em>(width)</em> e uma <strong>altura</strong>
+        <em>(height)</em> e a esse conjunto de propriedades, damos o nome de <em>box-size</em>(tamanho de caixa). O
+        tamanho da caixa não inclui as medidas de <em>padding</em>, <em>border</em>, <em>outline</em> e <em>margin</em>.</p>
+    <h3>Borda</h3>
+        <p>Depois do conteúdo e de seu tamanho, vamos nos focar na <strong>borda</strong> que fica em volta dele.
+        Ela pode ter uma espessura, uma cor e um formato.</p>
+    <h3>Preenchimento e Margem</h3>
+        <p>Entre a borda e o conteúdo - da borda para dentro - temos o <strong>preenchimento</strong>
+        <em>(padding)</em> e da borda para fora, temos a margem<strong>(margin)</strong>.</p>
+    <h3>Contorno</h3>
+        <p>Entre a margem e a borda, podemos determinar o <strong>contorno</strong><em>(outline)</em> que
+        é muito pouco utilizado, mas existe. Ele é um traçado visual que podemos criar fora da borda e o 
+        cálculo da sua espessura faz parte da margem estabelecid.</p>
+    <h3>Cálculo do tamanho total</h3>
+        <p>Para calcular a largura e altura total de um elemento na tela, some os tamanhos do <strong>
+        conteúdo + preenchimento + borda + margem</strong>. O contorno não vai entrar nessa conta, pois 
+        utiliza parte da medida da margem.</p>
+    <h3>Box sizing</h3>
+        <p>Existe a propriedade <em>box-sizing</em> onde podemos definir que as dimensões <em>height</em>
+        e <em>width</em> não são medidas apenas a partir do conteúdo <em>(content-box)</em> e sim pela 
+        borda <em>(border-box)</em>.</p>
+    <h2>Shorthands</h2>
+        <p>As configurações de borda e contorno também possuem <em>Shorthands</em> para simplificar o 
+        código anterior. A ordem para as duas configurações é sempre a mesma para as duas Shorthands:
+        largura <em>(-width)</em>, estilo <em>(-style)</em> e cor <em>(-color)</em>.</p>
+        <img src="../Imagens/shorthand.jpg" alt="abreviasao">
+    <h3>Preenchimento e margem personalizados</h3>
+        <p>Todo elemento da caixa possui quatro valores para <em>padding</em> e quatro para <em>margin</em>,
+        sempre nessa mesma ordem: superior <em>(-top)</em>, direita <em>(-rigth)</em>, inferior <em>(-bottom)</em>,
+        esquerda <em>(-left)</em>. Quando colocamos um único valor de dimensão para o preenchimento ou margem,
+        esse mesmo valor é aplicado simetricamente a todas as direções, mas também podemos fazer códigos como:</p>
+    <img src="../Imagens/shorthand02.jpg" alt="abreviasao2">
+        <p>Também existe a opção de indicar cada <em>shorthand</em> das propriedades de preenchimento e 
+        borda usando apenas duas medidas:</p>
+    <img src="../Imagens/shorthand03.jpg" alt="abreviasao3">
+        <p>Essa simplificação só é possível quando as medidas <em>-top</em> e <em>-bottom</em> forem 
+        iguais entre si mesmo também ocorrer entre as medidas <em>-rigth</em> e <em>-left</em>.</p>
+        <p>Um recurso muito util para centralização de blocos, é pedir que o navegador calcule automaticamente
+        as margens da esqueda e da direita para que o bloco seja colocado no meio do navegador, independente
+        do tamanho da janela, é usar a seguinte declaração no seu seletor <em>margin: auto;</em></p>
+    <h2>Caixa block-level</h2>
+        <p>Um elemento dito <em>block-level</em> sempre vai se iniciar em uma nova linha e vai ocupar a
+        largura total do elemento onde ele está contido. Se não esttiver contido em nenhuma outra caixa,
+        ele vai ocupae 100% da largura do &lt;<em>body</em>&gt;.</p>
+        <p>O elemento <em>block-level</em> mais conhecido é o &lt;div&gt; e suas variações semânticas
+        modernas da <abbr title="Hyper Text Markup Language">HTML5</abbr>, como &lt;<em>main</em>&gt;,
+        &lt;<em>section</em>&gt;,&lt;<em>aside</em>&gt;, etc.</p>
+        <p>Alguns elementos <abbr title="Hyper Text Markup Language">HTML</abbr> que são block-level são:</p>
+        <em>
+            <p>&lt;adress&gt; &lt;article&gt; &lt;aside&gt; &lt;blockquote&gt; &lt;canvas&gt;</p>
+            <p>&lt;div&gt; &lt;dl&gt; &lt;dt&gt; &lt;fieldset&gt; &lt;figcaption&gt; &lt;pre&gt;</p>
+            <p>&lt;footer&gt; &lt;h1 - h6&gt; &lt;form&gt; &lt;header&gt; &lt;hr&gt; &lt;figure&gt;</p>
+            <p>&lt;main&gt; &lt;noscript&gt; &lt;nav&gt; &lt;ol&gt; &lt;p&gt; &lt;li&gt; &lt;dd&gt;</p>
+            <p>&lt;section&gt; &lt;tfoot&gt; &lt;table&gt; &lt;ul&gt; &lt;video&gt;</p>
+        </em>
+    <h2>Caixa inline-level</h2>
+        <p>Um elemento do tipo <em>inline-level</em> não vai começar em uma nova linha, e sim no ponto
+        exato onde foram definidos. E a largura dele vai ocupar apenas o tamanho relativo ao seu coneúdo.</p>
+        <p>Alguns elementos <em>inline-level</em> usados pela <abbr title="Hyper Text Markup Language">HTML:</abbr></p>
+        <em>
+            <p>&lt;a&gt; &lt;abbr&gt; &lt;acronym&gt; &lt;b&gt; &lt;bdo&gt; &lt;br&gt;</p>
+            <p>&lt;button&gt; &lt;cite&gt; &lt;code&gt; &lt;dfn&gt; &lt;em&gt; &lt;i&gt;</p>
+            <p>&lt;img&gt; &lt;input&gt; &lt;kbd&gt; &lt;label&gt; &lt;map&gt; &lt;object&gt;</p>
+            <p>&lt;output&gt; &lt;q&gt; &lt;samp&gt; &lt;script&gt; &lt;select&gt; &lt;small&gt;</p>
+            <p>&lt;span&gt; &lt;strong&gt; &lt;sub&gt; &lt;textarea&gt; &lt;tt&gt; &lt;var&gt;</p>
+        </em>
+    <h2>Tags de Agrupamentos</h2>
+        <p>Na linguagem <abbr title="Hyper Text Markup Language">HTML</abbr> padrão tinha apenas duas tags de 
+        agrupamentos genérico: a &lt;div&gt; e a &lt;span&gt;. A diferença entre elas é que a primeira (&lt;div&gt;) é um
+        elemento agrupador do tipo <em>block-level</em> e o segundo(&lt;span&gt;) é <em>inline-level</em>. No mais, agem 
+        exatamente da mesma maneira, servindo para juntar vários outros elementos <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+        <p>Com o surgimento da <abbr title="Hyper Text Markup Language">HTML5</abbr>, surgiram as tags semânticas de agrupamento.
+        Isso não significa que as &lt;div&gt; e &lt;span&gt;(agora não-semânticas) deixaram de existir ou ficaram obsoletas, mas
+        seu uso agora faz menos sentido, pois temos tags para dividir as partes do nosso documento 
+        <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+        <p>Principais agregadores semânticos da <abbr title="Hyper Text Markup Language">HTML5</abbr>.</p>
+    <h3>Header</h3>
+        <p> Criar áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até
+        mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos &lt;h1&gt; - &lt;h6&gt;
+        e subtítulos. Podem também conter menus de navegção.
+        </p>
+    <h3>Nav</h3>
+        <p>Define uma área que possui os links de navegação pela estrutura de páginas que vão compor o
+        website. Um &lt;nav&gt; pode estar dentro de um &lt;header&gt;.
+        </p>
+    <h3>Main</h3>
+        <p>É um agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra
+        as seções, artigos e conteúdo periféricos.
+        </p>
+    <h3>Section</h3>
+        <p>Criar seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou dividir os
+        conteúdos específicos. Segundo a documentação oficial da W3C, "uma seção é um agrupamento temático
+        de conteúdos, tipicamente com um cabeçalho".
+        </p>
+    <h3>Article</h3>
+        <p>Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma independente e dizem
+        respeito a um mesmo assunto. Podemos usar um &lt;article&gt; para delimitar um post de blog ou fórum,
+        uma notícia, etc.
+        </p>
+    <h3>Aside</h3>
+        <p>Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente
+        um conteúdo &lt;aside&gt; está posicinado ao lado de um determinado texto ou até mesmo no meio dele,
+        exatamente como fizemos no blo de texto apresentado anteriormente, falando sobre "MÚLTIPLOS NÍVEIS".
+        </p>
+        <p>A sua criatividade e planejamento vai definir a estrutura do seu site. Sendo assim, é possível ter um
+        ou mais &lt;article&gt; dentro de uma &lt;section&gt; ou até mesmo criar &lt;section&gt; dentro de um
+        &lt;article&gt;. Não existem limitações quanto a isso, por isso chamamos de Múlti níveis.</p>
+    <h3>Footer</h3>
+        <p>Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do
+        conteúdo periférico (o que caracterizaria um &lt;aside&gt;), mas possui informações sobre autoria do
+        conteúdo,links adicionais, mapa do site e documentos relacionados.
+        </p>
+        <p>Veja o exemplo a seguir:</p>
+        <img src="../Imagens/estruturaex.jpg" alt="explo de estrutura">
+    <div class="bp"><a href="ex009.html" target="_self" rel="prev" class="bp">Voltar pagina</a></div>
+    <div class="mp"><a href="01index.html" target="_self" rel="prev" class="mp">Pagina principal</a></div>
+    <div class="np"><a href="ex011.html" target="_self" rel="next" class="np">Proxima pagina</a></div>
+</body>
+</html>
