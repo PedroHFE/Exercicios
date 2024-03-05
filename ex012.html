@@ -40,30 +40,78 @@
         #q3{
             background-image: url(img/pattern002.png);
         }
+        img{
+            display: block;
+            margin: auto;
+            width: 350px;
+            height: 350px;
+        }
     </style>
 </head>
 <body>
     <h1>Imagens de fundo</h1>
-    <div class="quadrado" id="q1">
-        <a href="ex011.html" class="bp">Voltar uma pagina</a>
-    </div>
-    <div class="quadrado" id="q2">
-        <a href="01index.html" class="mp"> Pagina principal</a>
-    </div>
-    <div class="quadrado" id="q3">
-        <a href="ex012.html" class="np">Proxima pagina</a>
-    </div>
+        <div class="quadrado" id="q1">
+            <a href="ex011.html" class="bp">Voltar uma pagina</a>
+        </div>
+        <div class="quadrado" id="q2">
+            <a href="01index.html" class="mp"> Pagina principal</a>
+        </div>
+        <div class="quadrado" id="q3">
+            <a href="ex012.html" class="np">Proxima pagina</a>
+        </div>
     <h2>Trabalhando com imagens de fundo</h2>
-    <p>Para utilizar imagens no fundo é fácil, basta usar a tag <em>background-image: url()</em>
-    e colocar o caminho da imagem. Colocar a imagem é fácil, mas não pode esquecer que por padrão
-    a imagem vai carregar na altura e largura do arquivo e também vai se repetir.</p>
+        <p>Para utilizar imagens no fundo é fácil, basta usar a tag <em>background-image: url()</em>
+        e colocar o caminho da imagem. Colocar a imagem é fácil, mas não pode esquecer que por padrão
+        a imagem vai carregar na altura e largura do arquivo e também vai se repetir.</p>
     <h3>Tags para configuirar a imagem</h3>
-    <ol>
-        <li>background-size: 100px Largura(Width) 100px Altura(heigth);</li>
-        <li>background-repeat: repeat; Padrão que repete a imagem</li>
-        <li>background-repeat: no-repeat; Não repete a imagem</li>
-        <li>background-repeat: repeat-x; Repete a imagem na horizontal</li>
-        <li>background-repeat:repeat-y; Repete a imagem na vertical</li>
-    </ol>
+    
+        <ul><h4>Background size e background repeat</h4>
+            <li><strong>background-repeat: repeat;</strong> Padrão que repete a imagem</li>
+            <li><strong>background-repeat: no-repeat;</strong> Não repete a imagem</li>
+            <li><strong>background-repeat: repeat-x;</strong> Repete a imagem na horizontal</li>
+            <li><strong>background-repeat:repeat-y;</strong> Repete a imagem na vertical</li>
+            <li><strong>background-size:</strong> 100px Largura(Width) 100px Altura(heigth);</li>
+        </ul>
+        <img src="../Imagens/repeat.jpg" alt="Exemplo de repetição">
+            <p>Além de escolher o nível de repetição do <em>background</em>, também podemos mudar a
+            <strong>posição de referência</strong> de início das repetições. Por padrão, é considerado 
+            o canto esquerdo superior (left top), mas podemos ter várias opções. Use a imagem abaixo
+            como referência sempre que precisar definir a posição do fundo com a propriedade
+            <em>background-position</em> no seu código.</p>
+        <img src="../Imagens/posicoes.jpg" alt="Posições de referência">
+            <p>Outra coisa que podemos fazer é <strong>redimensionar</strong> a imagem para forçá-la 
+            a caber na caixa. Por padrão, nenhum redimensionamento será aplicado, e a imagem será 
+            exibida do seu tamanho matural. Porém, podemos usar a propriedade <em>background-size</em> 
+            para alterar esse comportamento.</p>
+        <ul>Os valores aceitos por essa propriedade são:
+            <li><strong>auto</strong> (padrão) a imagem de fundo será aplicada em seu tamanho original.</li>
+            <li><strong>[length]px</strong> Redimensiona a largura da imagem e faz a altura se adaptar automaticamente.</li>
+            <li><strong>[length]%</strong> Podemos informar as duas dimensões na sequência ou também usar valores percentuais.</li>
+            <li><strong>contain</strong> Muda o tamanho da imagem para que seja sempre totalmente exibida na tela, sem nenhum corte.</li>
+            <li><strong>cover</strong> Redimensiona a imagem para que cubra o contêiner, mesmo que para isso ocorram alguns cortes.</li>
+        </ul>
+        <h4>Background-attachmente</h4>
+            <p>A última propriedade que podemos configuiraré o <strong>vínculo</strong> <em>(attachment)</em>
+            da imagem de fundo com o resto do documento, principalmente se o conteúdo for mair do que a altura
+            da página e seja necessaário vazar uma rolagem vertical.</p>
+        <ul> A propriedade <em>background-attachment</em> aceita os valores:
+            <li><strong>scroll</strong> (padrão) a imagem de fundo vai rolar junto com o conteúdo.</li>
+            <li><strong>fixed</strong> A imagem de fundo vai ficar fixada enquanto o conteúdo vai sendo rolado.</li>
+        </ul>
+            <p>Existe uma <em>shorthand</em> para simplificaar o uso de propriedades que se apliquem 
+            ao fundo de uma caixa. A propriedade abreviada <em>background</em> pode ser declarada 
+            agrupando as seguintes configurações:</p>
+        <ol>
+            <li><strong>background-color:</strong> black;</li>
+            <li><strong>background-image:</strong> url('endereco/imagem.jpeg');</li>
+            <li><strong>background-position:</strong> center center;</li>
+            <li><strong>background-repeat:</strong> no-repeat;</li>
+            <li><strong>background-size:</strong> cover;</li>
+            <li><strong>background-attachment:</strong> fixed;</li>
+        </ol>
+            <p>A declaração ficaria sim <strong>background:</strong> black url('endereco/imagem.jpeg') center center no-repeat cover fixed;
+            Na documentação do W3C está exatamente assim, mas pode ocorrer um erro na parte do size, ter que 
+            utilizar a <em>shorthand background</em> sem o <em>size</em> e criar em baixo um 
+            <em>background-size: cover;</em>.</p>
 </body>
 </html>
