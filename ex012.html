@@ -5,9 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Colocando imagens no fundo</title>
+    <style>
+        body{
+            background-image: url(img/wallpaper002.jpg);
+        }
+        h1{
+            background-color: white;
+            padding: 5px;
+        }
+        h2{
+            background-color: white;
+            padding: 5px;
+        }
+        p{
+            background-color: white;
+            padding: 5px;
+        }
+        div.quadrado{
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 300px;
+            height: 30px;
+            background-color: gray;
+            text-align: center;
+        }
+        #q1{
+            background-color: rgba(0, 247, 255, 0.507);
+        }
+        #q2{
+            background-image: linear-gradient(to bottom, rgb(0, 255, 13), rgba(0, 247, 255, 0.507));
+        }
+        #q3{
+            background-image: url(img/pattern002.png);
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Imagens de fundo</h1>
+    <div class="quadrado" id="q1">
+        <a href="ex011.html" class="bp">Voltar uma pagina</a>
+    </div>
+    <div class="quadrado" id="q2">
+        <a href="01index.html" class="mp"> Pagina principal</a>
+    </div>
+    <div class="quadrado" id="q3">
+        <a href="ex012.html" class="np">Proxima pagina</a>
+    </div>
+    <h2>Trabalhando com imagens de fundo</h2>
+    <p>Para utilizar imagens no fundo é fácil, basta usar a tag <em>background-image: url()</em>
+    e colocar o caminho da imagem. Colocar a imagem é fácil, mas não pode esquecer que por padrão
+    a imagem vai carregar na altura e largura do arquivo e também vai se repetir.</p>
+    <h3>Tags para configuirar a imagem</h3>
+    <ol>
+        <li>background-size: 100px Largura(Width) 100px Altura(heigth);</li>
+        <li>background-repeat: repeat; Padrão que repete a imagem</li>
+        <li>background-repeat: no-repeat; Não repete a imagem</li>
+        <li>background-repeat: repeat-x; Repete a imagem na horizontal</li>
+        <li>background-repeat:repeat-y; Repete a imagem na vertical</li>
+    </ol>
 </body>
 </html>
