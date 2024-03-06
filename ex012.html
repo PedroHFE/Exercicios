@@ -46,6 +46,60 @@
             width: 350px;
             height: 350px;
         }
+        #fora1{
+            background-color: aquamarine;
+            width: 514px;
+            height: 378px;
+            background-image: url(img/target001.png);
+            background-size: cover;
+        }
+        #dentro1{
+            background-color: red;
+            width: 256px;
+            height: 191px;
+            background-image: url(img/target001.png);
+            background-size: cover;
+            margin: 0px;
+        }
+        #fora2{
+            background-color: aquamarine;
+            width: 505px;
+            height: 370px;
+            background-image: url(img/target001.png);
+            background-size: cover;
+            position: relative;
+        }
+        #dentro2{
+            background-color: red;
+            width: 253px;
+            height: 185px;
+            background-image: url(img/target001.png);
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: 0px;
+        }
+        #fora3{
+            background-color: aquamarine;
+            width: 514px;
+            height: 378px;
+            background-image: url(img/target001.png);
+            background-size: cover;
+            position: relative;
+        }
+        #dentro3{
+            background-color: red;
+            width: 253px;
+            height: 185px;
+            background-image: url(img/target001.png);
+            background-size: cover;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0px;
+        }
     </style>
 </head>
 <body>
@@ -63,7 +117,7 @@
         <p>Para utilizar imagens no fundo é fácil, basta usar a tag <em>background-image: url()</em>
         e colocar o caminho da imagem. Colocar a imagem é fácil, mas não pode esquecer que por padrão
         a imagem vai carregar na altura e largura do arquivo e também vai se repetir.</p>
-    <h3>Tags para configuirar a imagem</h3>
+    <h3>Tags para configurar a imagem</h3>
     
         <ul><h4>Background size e background repeat</h4>
             <li><strong>background-repeat: repeat;</strong> Padrão que repete a imagem</li>
@@ -91,7 +145,7 @@
             <li><strong>cover</strong> Redimensiona a imagem para que cubra o contêiner, mesmo que para isso ocorram alguns cortes.</li>
         </ul>
         <h4>Background-attachmente</h4>
-            <p>A última propriedade que podemos configuiraré o <strong>vínculo</strong> <em>(attachment)</em>
+            <p>A última propriedade que podemos configuirar é o <strong>vínculo</strong> <em>(attachment)</em>
             da imagem de fundo com o resto do documento, principalmente se o conteúdo for mair do que a altura
             da página e seja necessaário vazar uma rolagem vertical.</p>
         <ul> A propriedade <em>background-attachment</em> aceita os valores:
@@ -113,5 +167,38 @@
             Na documentação do W3C está exatamente assim, mas pode ocorrer um erro na parte do size, ter que 
             utilizar a <em>shorthand background</em> sem o <em>size</em> e criar em baixo um 
             <em>background-size: cover;</em>.</p>
+        <h2>Centralização vertical em contêineres</h2>
+            <p>Contêiner tem um significado simples e direto: "aquele que contém coisas". Aprendemos que existem
+            elementos que podem conter outros elementos. As <em>&lt;div&gt;</em> são um exemplo de elemento 
+            <em>contêiner</em>. Quando queremos centralizar blocos horizontalmente, aprendemos a usar o <em>margin:auto</em>
+            ; nas folhas de estilo(CSS). Agora vamos aprender a centralizar na vertical.
+            </p>
+            <p>Para começar temos que criar um contêiner uma hierarquia simples de dois blocos, vou criar duas <em>&lt;div&gt;</em>
+            ,dar um id com o nome de 'fora' e a outra com id 'dentro'.</p>
+            <div id="fora1">
+                <div id="dentro1">
+                </div>
+            </div>
+            <p>O contêiner(um box) por padrão já vem com um posicionamento relativo no <abbr 
+            title="Hyper Text Markup Language">HTML</abbr> e conteúdo com um posicionamento absoluto. Para
+            configurar é preciso deixar isso explicito com a tag <strong>position</strong>: <em>relative;</em>
+            para a div de fora e <strong>position</strong>: <em>absolute;</em> para a div de dentro. Quando
+            definimos um bloco com posicionamento absoluto, podemos personalizar a sua posição exata através 
+            das propriedades <em>left</em> e <em>top</em>. Vamos configurar os dois na metade do contêiner.</p>
+            <div id="fora2">
+                <div id="dentro2">
+                </div>
+            </div>
+            <p>Note que, o retângulo interno foi realmente posicionado a 50% da tela, mas pelo canto superior 
+            esquerdo da caixa. Vamos realizar uma tranformação e mover o retãngulo interno para a esquerda e 
+            para cima, assim ele ficará efetivamente centralizado com a tag <strong>transform</strong>: 
+            <em>translate (-50%, -50%);</em>.</p>
+            <div id="fora3">
+                <div id="dentro3">
+                </div>
+            </div>
+            <p>Pronto! Essa é apenas uma das técnicas de centralização de conteúdo, mas as outras requerem
+            aprender outros conceitos mais aprofundados das CSS (folhas de estilos), como as caixas flexíveis
+            (Flexbox).</p>
 </body>
 </html>
