@@ -1,18 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Tabelas</title>
 </head>
 <body>
     <header>
+        <h1>Trabalhando com tabelas</h1>
         <nav>
             <a href="ex012.html" target="_self" rel="prev" class="bp">Voltar pagina</a>
             <a href="01index.html" target="_self" rel="prev" class="mp">Pagina principal</a>
             <a href="ex014.html" target="_self" rel="next" class="np">Proxima pagina</a>
         </nav>
     </header>
+    <main>
+        <h2>Hierarquia de tabelas simples</h2>
+        <p>Em primeiro lugar temos  a tag <em>table</em> = tabela dentro de table temos, <em>table row</em> = linha 
+            de tabela, dentro do table row <em>temos header</em> = cabeçalho de tabela e <em>table data</em> = dado 
+            de tabela. O w3c diz que o fechamento das tags &lt;<em>td</em>&gt;(Table data) e &lt;<em>tr</em>&gt; 
+            (Table row) é opcional, vale lembra que se a hierarquia não for obedecida os dados vão aparecer antes 
+            ou depois da tabela.</p>
+            <table>
+                <tr> <!--Primeira linha-->
+                    <td>A1</td>
+                    <td>A2</td>
+                    <td>A3</td>
+                </tr>
+                <tr><!--Segunda linha-->
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>C2</td>
+                </tr>
+                <tr><!--Terceira linha-->
+                    <td>A3</td>
+                    <td>B3</td>
+                    <td>C3</td>
+                </tr>
+            </table>
+            <p>&lt;table&gt; <br>
+                &lt;tr&gt; <!--Primeira linha--> <br>
+                    &lt;td&gt;A1&lt;/td&gt; <br>
+                    &lt;td&gt;A2&lt;/td&gt; <br>
+                    &lt;td&gt;A3&lt;/td&gt; <br>
+                &lt;/tr&gt; <br>
+                &lt;tr&gt;<!--Segunda linha--> <br>
+                    &lt;td&gt;A2&lt;/td&gt; <br>
+                    &lt;td&gt;B2&lt;/td&gt; <br>
+                    &lt;td&gt;C2&lt;/td&gt; <br>
+                &lt;/tr&gt; <br>
+                &lt;tr&gt; <!--Terceira linha--> <br>
+                    &lt;td&gt;A3&lt;/td&gt; <br> 
+                    &lt;td&gt;B3&lt;/td&gt; <br>
+                    &lt;td&gt;C3&lt;/td&gt; <br>
+                &lt;/tr&gt; <br>
+            &lt;/table&gt; </p>
+    </main>
 </body>
 </html>
