@@ -57,6 +57,24 @@
                     &lt;td&gt;C3&lt;/td&gt; <br>
                 &lt;/tr&gt; <br>
             &lt;/table&gt; </p>
+            <h2>Alinhamento da tabela</h2>
+            <p>Para alinhar na horizontal, podemos usar a tag <em>text-aling</em> (left-center-right) 
+            e para alinhar na vertical, usamos a tag <em>vertical-align</em>(top-middle-bottom).</p>
+            <p>Coloque sempre o <strong>scope</strong>(escopo) das <em>th</em>(titulos), <em>scope="col"</em>
+            para os dados que ficarão na coluna (a baixo), e <em>scope="row"</em> para os dados na mesma 
+            linha.</p>
+            <h2>Tags semanticas para tabelas grandes</h2>
+            <p>Nas tabelas grandes ainda usamos as tags <em>tr(table row) e td(table data)</em> mas 
+            agora aprenderemos a anatomia das tabelas grandes. Sempre vai começar com a tag <strong>table</strong>
+            mas dentro de table, usaremos a <em>Thead</em>(cabeça da tabela), <em>Tbody</em>(corpo da tabela) e
+            o <em>Tfoot</em>(pé da tabela) da tabela, para finalizar também podemos colocar uma legenda na
+            tabela com o <em>Caption</em>, o caption você só coloca texto, nada de tr ou td.</p>
+            <h2>Efeito zebrado</h2>
+            <p>O efeito zebrado é muito recomendado quando a tabela é grande, podemos fazer esse efeito
+            bem rapido e fácil no <abbr title="Cascading Style Sheets">CSS</abbr>. Usamos a pseudo classe
+            <em>:nth-child()</em>, entre parênteses podemos usar 3(três) valores, são <em>odd</em>(impar), 
+            <em>even</em>(par) ou (n°)<em>n</em>. O <em>n</em> a cada x(numero) ele vai aplicar o efeito.
+            </p>
     </main>
 </body>
 </html>
