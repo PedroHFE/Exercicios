@@ -6,6 +6,24 @@
     <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Tabelas</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 300px;
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        th{
+            background-color: rgb(46, 45, 45);
+            color: white;
+            border-radius: 0px;
+        }
+        tr, td{
+            border: 1px solid black;
+            border-radius: 0px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -75,6 +93,43 @@
             <em>:nth-child()</em>, entre parênteses podemos usar 3(três) valores, são <em>odd</em>(impar), 
             <em>even</em>(par) ou (n°)<em>n</em>. O <em>n</em> a cada x(numero) ele vai aplicar o efeito.
             </p>
+            <h2>Cabeçalho fixo em tabelas grandes</h2>
+            <p>Para esse recurso, primeiro vamos escrever o caminho nas <abbr title="Cascading Style Sheets">CSS</abbr>
+            <em> thead > tr > th</em>, segundo usamos a tag position com a propriedade<em>stick;</em> e 
+            por ultimo a tag <em>top</em> com 0px, mas lembrando de colocar a cor de fundo se não vai descer
+            só o texto. Vale lembrar de colocar a propriedade <em>position: </em>relative no table, para 
+            o efeito funcionar.</p>
+            <h2>Mesclagem de células</h2>
+            <p>Atenção ao mesclar as células, pois os dois comando de mesclagem são parecidos e fácilmente
+            de serem confundidos. O primeiro é <em>rowspan</em> que vai ser dentro de td, que fica <em>
+            td rowspan=" "</em>, o rowspan vai pegar as linhas de baixo de acordo com o número que for 
+            colocado entre as aspas. O segundo é o <em>colspan</em> que também vai dentro de td, <em>
+            colspan=" "</em> mas a diferença é que ele irá ocupar as linhas laterais. Veja o exemplo abaixo: 
+            </p>
+            <table>
+                <thead>Exercício</thead>
+                <th>Coluna A</th>
+                <th>Coluna B</th>
+                <th>Coluna C</th>
+                <tr>
+                    <td colspan="2">1</td>
+                    <td rowspan="3">2</td>
+                    
+                </tr>
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td>5</td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td>8</td>
+                    
+                </tr>
+            </table>
+            <p>Na coluna A o número 1, ela está ocupando dois espaços e para isso usamos o <strong>
+            colspan</strong> para ocupar a coluna ao lado. Já os números 2 e 4 usamos o <strong>
+                rowspan</strong> para ocupar as linhas abaixo.</p>
     </main>
 </body>
 </html>
