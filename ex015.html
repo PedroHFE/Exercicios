@@ -43,7 +43,7 @@
             (é aproximadamente 3 mil letras).</p>
             <p><strong>POST:</strong> dados sensíveis (o ideal é com HTTPS para proteger dados), os 
             dados não aparecem na URL, mais de 3 mil bytes, envio de arquivos.</p>
-        <h2>Alguns tipos de controle</h2>
+        <h2>Alguns tipos de controle de input</h2>
             <ul>
                 <li><strong>require</strong>: Requerimento, não permite enviar os dados vazios.</li>
                 <li><strong>minlength</strong>: Mínimo de caracteres.</li>
@@ -57,15 +57,24 @@
                 <li><strong>value</strong>: Já aperece sugerido dentro do input.</li>
                 <li><strong>fieldset</strong>: Grupo de cantos(grupo de dados).</li>
                 <li><strong>legend</strong>: Legenda.</li>
+                <li><strong>range</strong>: Cria uma barra com níveis, que o usuário pode arrastar. </li>
+                <li><strong>color</strong>: Cria uma caixa que permite o usuário escolha uma cor.</li>
+                <li><strong>file</strong>: Para o usuário escolher e enviar arquivos. </li>
                 <li><strong>checkbox</strong>: Cria uma caixinha para marcar e desmarcar.</li>
                 <li><strong>radio</strong>: Cria uma bolinha para marcar.</li>
                 <li><strong>pattern</strong>: Padrão, alguns inputs tem suas expressões regulares diferentes.</li>
             </ul>
+            <p>Por padrão, o range começa sempre em 50 (no meio), variando de 0 a 100, mas pode ser personalizado, 
+            utilizando os atributos value=" ", min=" " e max=" ", respectivamente.</p>
+            <p>Em input <em>color</em> você pode definir a cor inical usando o atributo value=" ". Como também 
+            definir algumas o número de outras cores mas usando outros inputs juntos.</p>
+            <p>Ao trabalhar com input:file, usar sempre o atributo method="POST" dentro da tag form, para que não 
+            haja uma limitação de 3.000 bites no envio do arquivo.</p>
             <p>No input <em>radio</em> se tiver mais de uma opção não esqueça de colocar o <em>name</em> igual e o 
             <em>id</em> diferentes, caso o contrário não conseguira desmarcar. No <em>radio</em> só pode ter um 
             marcado diferente do <em>checkbox</em>.</p>
             <p><em>Pattern</em> configuramos uma expressão regular para definir qual será o formato aceito para 
-                o valor. Toda expressão regular começa com um '^' e termina com '$', dígitos para telefone pode 
+            o valor. Toda expressão regular começa com um '^' e termina com '$', dígitos para telefone pode 
             inciar assim '\d'.</p>
             <ul>
                 <li>\([0-9] {2}\) vai indicar que é necessário colocar dois dígitos de 0 a 9 entre parênteses.</li>
@@ -73,6 +82,70 @@
                 <li>[0-9] {4,6}- configura que podem existir entre 4 e 6 dígitos numéricos entre 0 e 9 e logo depois, um traço.</li>
                 <li>[0-9] {4} por fim, o número se encerra com 4 dígitos entre 0 e 9.</li>
             </ul>
+        <h2>Elemento Textarea</h2>
+            <p> A tag <em>textarea</em> cria uma área de texto que vai aceitar múltiplas linhas. Nesse caso, os parâmetros 
+            <em>rows</em>(linhas) e <em>cols</em>(colunas) definem respectivamente em quantas linhaas e quantas colunas o 
+            conteúdo será exibido, mas saiba que o conteúdo completo pode ter muito mais que o número de linhas configurado. 
+            A capacidade de um &lt;<em>textarea</em>&gt; é ilimitada por padrão, você pode colocar um <em>maxlength</em> 
+            para limitar a quantidade de caracteres que o usuário pode digitar. Podemos usar o atributo  style="resize: 
+            none" para evitar que o usuário altere o tamanho do textarea.</p>
+        <h2>Elemento Select:</h2>
+            <p>A tag de formulário <em>select</em> tem uma função muito parecida com a de um input.. Isso porque ela renderiza
+            na tela um componente de entrada para o formulário. O elemento <abbr title="Hyper Text Markup Language">HTML</abbr> <em>select</em> representa um controle que 
+            exibe um menu de opções. É um elemento que ao clicarmos, desce uma lista com diferentes opções para escolher.</p>
+            <p>No elemento <em>select</em>, o usuário não insere um dado digitando, ele simplesmente seleciona a opção que lhe atende...
+            Portanto, use esse elemento para a entrada de dados que são imutáveis. Por exemplo: Usar o elemento <em>select</em> para
+            escolher um dos estados do Brasil. Não existe necessidade de alguém eventualmente precisar escolher outro item que
+            já não esteja na lista porque a composição dos estados é teoricamente imutável. <br>
+            <strong>Nota</strong>: No elemento <em>select</em>, os atributos "name" e "id" também devem ser configurados normalmente... Ele também se
+            enquadra em um componente de entrada como qualquer outro, portanto também precisa de uma label. Sendo que o
+            VÍNCULO entre o componente <em>select</em> e sua respectiva label também deve ser estabelecido.</p>
+            <p>Depois de inserir o <em>select</em> no seu form, é preciso definir as opções que irão compor a lista de seleção dele.
+            Para definir as opões do elemento, usamos a tag <em>option</em>.
+            Essa tag deve ser inserida dentro do elemento <em>select</em> (option é sempre introduzido como filho de <em>select</em> nesse caso),
+            sendo que ela tem a função de definir as opções aparecerão dentro do menu de seleção. Para cada opção da lista, um
+            novo option deve ser aberto dentro de <em>select</em>.</p>
+            <p>O rótulo da opção (texto que representa o item de lista quando a caixa de seleção é aberta) deve ser inserido
+            dentro do par de tags do option, por exemplo: &lt;option&gt;Santa Catarina&lt;/option&gt;.
+            Sendo que por padrão, quando uma tag option é aberta, um atributo "value" já acompanha a tag. É o conteúdo dentro
+            de "value" que de fato será enviado para o servidor quando a submissão do form é executada. Seguindo o exemplo
+            anterior, a nossa opção com o value configurado pode ser assim: &lt;option value="SC"&gt;Santa Catarina&lt;/option&gt;</p>
+            <p>Dentro de uma lista de seleção do elemento <em>select</em>, os options (itens da lista) podem ser AGRUPADOS em categorias intituladas,
+            isso facilita a navegação do usuário. Por exemplo, na nossa lista com os estados do Brasil, poderíamos organizar
+            esses estados pelas regiões do país, categorizar eles por região... Dessa maneira, quando a lista de seleção for aberta,
+            os estados iriam aparecer agrupados por região, sendo que cada um desses grupos de estado teriam um título (sudeste, sul,
+            centro-oeste e por aí vai).</p>
+            <p>Para fazer isso, utilizamos a tag <em>optgroup</em>. Para formar um grupo dentro da lista de seleção com o optgroup,
+            você deve envelopar com essa tag os itens (options) que supostamente fazem parte daquele grupo. Sendo que obrigatoriamente,
+            quando uma tag optgroup é aberta, temos que usar nela o atributo "label" (é um atributo que se chama label, não é uma tag
+            label). O texto inserido dentro do atributo label que será exibido para o usuário como o título daquele grupo
+            quando a lista for aberta. <br>
+            <strong>Nota</strong>: Os itens da lista de seleção (options) ficam dispostos para o usuário na ordem de inserção do código 
+            <abbr title="Hyper Text Markup Language">HTML</abbr>.</p>
+        <h2>Atributo do select:</h2>
+            <p><strong>selected:</strong> O atributo selected serve para definirmos uma opção inicial padrão, ele deve ser inserido dentro da tag de
+            abertura do option que você deseja definir como padrão. Dessa forma, quando a página com o elemento <em>select</em>
+            for carregada, essa opção escolhida já vai aparecer por padrão selecionada no componente de entrada <em>select</em>,
+            ficando a critério do usuário alterar a opção ou manter a padrão determinada por você.</p>
+        <h2>Elemento Datalist</h2>
+            <p>O elemento <em>datalist</em> funciona junto com o <em>input:text</em> uma caixa de texto comum. A única 
+            diferença é a presença dp atributo <em>list</em>(lista), que vai apontar para uma <em>&lt;datalist&gt;</em> que 
+            está semdo criada logo abaixo.</p>
+            <p>Assim como &lt;select&gt;, uma &lt;datalist&gt; também pode conter vários &lt;option&gt; em seu interior. Visualmente, 
+            a caixa de texto vai aceitar qualquer valor personalizado, mas sempre vai sugerir os valores que definirmos dentro das 
+            opções, inclusive filtrando os valores exibidos conforme vamos digitando o conteúdo da caixa de texto.
+            </p>
+        <h2>Elemento Output em formulários HTML</h2>
+            <p>Um recurso que foi adicinado à <abbr title="Hyper Text Markup Language">HTML5</abbr> o elemento &lt;output&gt;, 
+            que pode ser usado para executar tarefas simples e gerar uma saída na tela. Essa execução é feita usando a Linguagem 
+            de Programação JavaScript e pode ser executada diretamente no atributo <em>oniput</em> do formulário.</p>
+            <p>A única novidade é onde temos um campo de saída que não pode ser editado pelo seu visitante e sequer será enviado 
+            pelo seu formulário. O seu objetivo aqui é manipular o seu conteúdo através de instruções simples. <strong>Atenção</strong> 
+            as saídas não são enviadas! O valor gerado dentro de um elemento &lt;<em>output</em>&gt; não será enviado quando 
+            pressionarmos o botão de submissão. Ele serve apenas para mostrar saídas ao seu visitante.</p>
+        <form action="" method="post">
+            
+        </form>
     </main>
 </body>
 </html>
