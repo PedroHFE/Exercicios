@@ -143,8 +143,106 @@
             pelo seu formulário. O seu objetivo aqui é manipular o seu conteúdo através de instruções simples. <strong>Atenção</strong> 
             as saídas não são enviadas! O valor gerado dentro de um elemento &lt;<em>output</em>&gt; não será enviado quando 
             pressionarmos o botão de submissão. Ele serve apenas para mostrar saídas ao seu visitante.</p>
-        <form action="" method="post">
-            
+        <form action="" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                    <p><label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome" placeholder="Nome composto aqui!" required>
+                    <label for="isobrenome">Sobrenome:</label>
+                    <input type="text" name="sobre" id="isobre" placeholder="Sobrenome completo!" required></p>
+                    <p><label for="sexo">Sexo:</label>
+                    <input type="radio" name="sexo" id="imasc" required>
+                    <label for="imasc">Masculino</label>
+                    <input type="radio" name="sexo" id="ifem" placeholder="18" required>
+                    <label for="ifem">Feminino</label>
+                    </p>
+                    <p><label for="idade">Idade:</label>
+                    <input type="number" name="idade" id="idade" min="14" max="130" required></p>
+            </fieldset>
+            <fieldset>
+                <legend>Informações para contato</legend>
+                    <p><label for="iemail">E-mail:</label>
+                    <input type="email" name="email" id="iemail" required placeholder="xxxx@email.com"></p>
+                    <p><label for="itel">Telefone:</label>
+                    <input type="tel" name="tel" id="itel" pattern="^\([0-9] {2}$\) ([\s]) [0-9] {4,6}- [0-9] {4}" required
+                    placeholder="(xx) xxxxx-xxxx" minlength="12" maxlength="13"></p>
+            </fieldset>
+            <fieldset>
+                <legend>Cadastre-se</legend>
+                    <p><label for="iuser">Usuário:</label>
+                    <input type="text" name="user" id="iuser" minlength="4" maxlength="20" required placeholder="abcd1234"></p>
+                    <p><label for="isenha">Criar senha:</label>
+                    <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20" placeholder="Não compartilhe!"></p>
+                    <p><label for="dsenha">Dica para recuperação de senha!</label>
+                    <input type="text" name="dica" id="dsenha" required minlength="5" maxlength="50" placeholder="Uma dica curta!"></p>
+            </fieldset>
+            <fieldset>
+                <legend>Sobre você!</legend>
+                <p><label for="iprof">Sua profissão:</label>
+                <input type="text" name="prof" id="iprof" list="lstprof" required placeholder="Desenvolvedor" minlength="3" maxlength="25">
+                <datalist id="lstprof">
+                    <optgroup label="Negócios">
+                        <option value="Administrador"></option>
+                        <option value="Contabilista"></option>
+                        <option value="Gestor de RH"></option>
+                    </optgroup>
+                    <optgroup label="Arte e Design">
+                        <option value="Animador"></option>
+                        <option value="Ator"></option>
+                        <option value="Fotógrafo"></option>
+                    </optgroup>
+                    <optgroup label="Ciências Humanas">
+                        <option value="Advogado"></option>
+                        <option value="Linguista"></option>
+                        <option value="Professor"></option>
+                    </optgroup>
+                    <optgroup label="Ciências Exatas">
+                        <option value="Analista de Sistemas"></option>
+                        <option value="Estatístico"></option>
+                        <option value="Matemático"></option>
+                    </optgroup>
+                </datalist></p>
+                <p><label for="iest">Seu Estado:</label>
+                <input type="text" name="est" id="iest" required placeholder="São Paulo" minlength="2" max="20" list="lstest">
+                <datalist id="lstest">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </datalist></p>
+                <p><label for="icor">Sua cor favorita:</label>
+                <input type="color" name="cor" id="icor" value="#0000ff"></p>
+                <p><label for="itext">Fale sobre você:</label></p>
+                <textarea name="text" id="itext" cols="50" rows="10" minlength="10" maxlength="3000" style="resize: none;"
+                placeholder="Escreva aqui um pouco sobre você..." required></textarea>
+                <p><label for="isatis">Nível de satisfação com o formulário:</label>
+                <input type="range" name="satis" id="isatis" min="0" max="10" value="5" 
+                oninput="ival.innerHTML = Number(isatis.value)">
+                <output id="ival">5</output></p>
+            </fieldset>
+            <p><input type="submit" value="Enviar  "> <input type="reset" value="Apagar  "></p>
         </form>
     </main>
 </body>
