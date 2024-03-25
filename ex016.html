@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <a href="ex016.html" target="_self" rel="prev" class="bp">Voltar página</a>
+        <a href="ex015.html" target="_self" rel="prev" class="bp">Voltar página</a>
         <a href="01index.html" target="_self" rel="prev" class="mp">Página principal</a>
         <a href="ex017.html" target="_self" rel="next" class="np">Proxima página</a>
     </nav>
@@ -19,6 +19,25 @@
         estilizações especificas para uma página web de acordo com certas condições, 
         fazendo assim com que esta página possa se adequar ao layout de tela em 
         diferentes tamanhos e tipos de mídia.</p>
+        <h2>Media types e Media features</h2>
+        <p>a configuração <em>media="all"</em> vai servir para todos os dispositivos, 
+        pois algumas configurações se repetem. <br>
+        Ex:&lt;link rel="stylesheet" href="estilos/style.css" media="all"&gt;</p>
+        <p><strong>Media types</strong> sao escritos dentro das aspas normais de media=" "
+        <ul>
+            <li><strong>media ="screen":</strong>tela</li>
+            <li><strong>media="print":</strong>impressora</li>
+            <li><strong>media="all":</strong>configurações gerais</li>
+        </ul></p>
+        <p>
+            As<strong>Media features</strong> são escritas dentro das aspas e dentro de (parênteses),
+            logo após os media types. <br>
+            media="screen and <strong>(orientation: portrait)</strong>" <br>
+                &lt;link rel="stylesheet" href="estilos/retrato.css" media="screen and <strong>(orientation: portrait)</strong>"&gt; <br>
+                &lt;link rel="stylesheet" href="estilos/paisagem.css" media="screen and <strong>(orientation: landscape)</strong>"&gt; <br>
+            Importante: media types nao tem parênteses, media features tem parênteses
+            isoladamente, ou seja, se tivermos três media fetures, teremos 3 entre parênteses
+        </p>
     </main>
 </body>
 </html>
