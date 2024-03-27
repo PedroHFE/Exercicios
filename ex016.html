@@ -29,15 +29,57 @@
             <li><strong>media="print":</strong>impressora</li>
             <li><strong>media="all":</strong>configurações gerais</li>
         </ul></p>
-        <p>
-            As<strong>Media features</strong> são escritas dentro das aspas e dentro de (parênteses),
-            logo após os media types. <br>
-            media="screen and <strong>(orientation: portrait)</strong>" <br>
-                &lt;link rel="stylesheet" href="estilos/retrato.css" media="screen and <strong>(orientation: portrait)</strong>"&gt; <br>
-                &lt;link rel="stylesheet" href="estilos/paisagem.css" media="screen and <strong>(orientation: landscape)</strong>"&gt; <br>
-            Importante: media types nao tem parênteses, media features tem parênteses
-            isoladamente, ou seja, se tivermos três media fetures, teremos 3 entre parênteses
-        </p>
+        <p>As<strong>Media features</strong> são escritas dentro das aspas e dentro de (parênteses),
+        logo após os media types. <br>
+        media="screen and <strong>(orientation: portrait)</strong>" <br>
+            &lt;link rel="stylesheet" href="estilos/retrato.css" media="screen and <strong>(orientation: portrait)</strong>"&gt; <br>
+            &lt;link rel="stylesheet" href="estilos/paisagem.css" media="screen and <strong>(orientation: landscape)</strong>"&gt; <br>
+        <strong>Importante:</strong> media types não tem parênteses, media features tem parênteses
+        isoladamente, ou seja, se tivermos três media fetures, teremos 3 entre parênteses.</p>
+        <p>Dá para utilizar os media <em>types</em> e media <em>features</em> no estilo CSS interno(local), 
+        <em>@media screen and (orientation: portrait(retrato)) ou (orientation: landscape(paisagem))</em>. Para 
+        o CSS externo é mesmo modelo, recomendado para projetos pequenos, para projetos e sites maiores é recomendado 
+        criar um arquivo para cada estilo.</p>
+        <h2>Mobile First</h2>
+        <p> Em uma abordagem mais tradicional, quando pensamos na construção de um site, idealizamos toda a estrutura 
+        e os recursos visuais que ele pode ter, criamos o layout completo, implementamos o projeto em um computador e 
+        depois nos preocupamos em adaptar toda a sua estrutura para que as telas menores possam exibir o site sem maiores 
+        problemas. Isso é o que chamamos de <strong>design responsivo.</strong></p>
+        <p>Porém, em uma abordagem um pouco diferente, podemos trilhar exatamente o caminho contrário, pensando inicialmente 
+        no layout e funcionalidades da versão móvel e depois adaptando tudo a telas maiores. Esse é o conceito proposto pela 
+        linha chamada de <strong>mobile first</strong> (o móvel primeiro), esquema proposto por <em>Luke Wroblewski</em>. 
+        Atualmente chefe de produtos Google.</p>
+        <p>Esse conceito acaba fazendo muito sentido, pois a GSMA- uma entidade mundial que representa as operadoras móveis 
+        - o Brasil é o país da América Latina com mais smartphones conectados de toda América Latina. Isso leva a uma grande 
+        probabilidade do seu site ser acessado em um dispositivo portátil conectado a um 4G e com tamanho limitado de tela.</p>
+        <p>Para contribuir ainda mais com essa visão, em 2018 o Google anunciou que passaria a valorizar mais na sua indexação 
+        os sites que tivessem a preocupação em gerar uma melhor experiência móvel ao usuário. Segundo o princípio fundamental 
+        da filosofia <strong>mobile first</strong>, pensar primeiro na versão móvel trás algumas vantagens:</p>
+        <ul>
+            <li>Uma maior divulgação do site, pois como vimos anteriormente, ferramentas de busca vão valorizá-lo.</li>
+            <li>Uma melhor experiência do usuário, que vai ter acesso ao conteúdo que foi pensado para que pudesse ser 
+                consumido de forma mais confortável e sem confusões.
+            </li>
+            <li>Aumento na credibilidade, já que os visitantes vão ter a percepção (ainda que inconsciente) de quem criou o 
+                site se preocupou com sua experiência.
+            </li>
+            <li>Otimização do carregamento, uma vez que sofremos com conexões lentas e dispositivos populares sem tanto poder 
+                de processamento.
+            </li>
+        </ul>
+        <h3>Breakpoints</h3>
+        <p>Breakpoints são pontos específicos de largura máxima (max-width) ou mínima (min-width) que indicam a transição 
+            entre diferentes layouts de página. Esses valores são tipicamente estabelecidos com base em consensos temporais 
+            sobre as larguras mais comuns de dispositivos utilizados em determinadas épocas.</p>
+            <ul>
+                <li>Mobile: 360 x 720</li>
+                <li>Iphone X: 375 x 812</li>
+                <li>Pixel 2: 411 x 731</li>
+                <li>Tablet: 768 x 1024</li>
+                <li>Laptop: 1336 x 768</li>
+                <li>High-res laptop or desktop: 1920 x 1080</li>
+            </ul>
+            <p>Lista divulgada em 25 de outubro de 2023.</p>
     </main>
 </body>
 </html>
