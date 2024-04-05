@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="ex017.html" target="_self" rel="prev" class="bp">Voltar página</a>
+            <a href="01index.html" target="_self" rel="prev" class="mp">Página principal</a>
+            <a href="ex019.html" target="_self" rel="next" class="np">Proxima página</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Tratamento de dados</h1> <!--Comentário em HTML-->
+            <p> Antes de começarmos, só para lembrar que o sinal de mais(+) tem a função <em>concatenação</em>, quando o tipo 
+                for string, ele só vai fazer a adição se for do tipo number. O comando prompt retorna o valor como uma string, 
+                independente do que foi digitado.</p>
+            <p>Para fazer essa interação usamos o comando <em>prompt</em> para perguntar o nome e o <em>alert</em> para 
+                dar o resultado e criamos uma variável pra guardar o dado(nome) recebido e usá-lo no <em>alert</em>. <br>
+            &lt;script &gt; <br>
+                <strong>var</strong> <em>nome</em> = window<strong>.prompt</strong>("Qual é o seu nome?") <br>
+                window<strong>.alert</strong>('Prazer em te conhecer ' + nome + '!') <br>
+            &lt;/script &gt;</p>
+            <p>Atualmente não é mais necessário colocar window antes do comando, nem o ponto e vírgula(;) no final. 
+                Para a mensagem aparecer não pode esquecer de usar aspas (' ' ou " ").</p>
+            <p>&lt;script &gt; <br>
+                var n1 = window.prompt('Digite um número')  <br>
+                var n2 = window.prompt('Digite outro número') <br>
+                var r = n1 + n2 <br>
+            window.alert("A adição dos números foi de " + r + "!") <br>
+            &lt;/script &gt;</p>
+            <p> Ao deixar igual ao exemplo acima, o comando só irá juntar os valores ex: 10 + 0  apareceria 100 em vez 
+                de 10. Para concertar isso tem que converter o n1 e o n2 para números.</p>
+            <p>Podemos fazer a conversão antes dos dados ir para as variáveis (n1 e n2) ou depois. Para fazer a conversão 
+                temos 3 maneiras. A primerira é o Number<strong>.parseInt(</strong>n<strong>)</strong> que vai converter 
+                para números inteiros, lembrando que o N de number e o I de int tem que ser escritos em maiúsculos. A 
+                segunda maneira é usando o Number<strong>.parseFloat(</strong>n<strong>)</strong> que irá converter para 
+                números reais(números quebrados) e igual ao maneira anterior tem obrigação de letras maiúsculas nesse caso 
+                o N de number e o F de float.</p>
+            <p>A última maneira é escrever <strong>Number(</strong>n<strong>)</strong> e o próprio JS vai descidir se o valor 
+                é inteiro ou real. Essa é maneira mais utilizada mas as vezes pode ocorrer de precisar forçar a leitura de 
+                um número real ou inteiro. É obrigatório o uso de parenteses, pode usar as 3 maneiras mas a última é mais 
+                eficaz.</p>
+            <p>Exemplo: <br>
+                var n1 = Number.parseInt(window.prompt('Digite um número')) ou var r = Nunber.paseInt(n1)<br>
+                var n2 = Number.parseFloat(window.prompt('Digite outro número')) ou var r = Number.parseFloat(n2)<br>
+                var n1 = Number(window.prompt('Digite um número')) ou var r = Number(n1) + Number(n2) </p>
+            <p>Podemos também fazer o contrário, converter um Number para String, existem duas maneiras <strong>String(</strong>
+                n<strong>)</strong> e n<strong>.toString()</strong>. Não esqueça das letras maiúsculas.Ex:<br>
+                window.prompt('A adição do números foi de ' + String(r) + '!') ou 
+                window.prompt('A adição do números foi de ' r.toString() + '!')</p>
+        <h2>Formatando Strings</h2>
+            <p>Ao escrever declarações o <em>Placeholder</em> <strong>${}</strong> ajuda muito a ganhar tempo e deixa o código 
+                mais limpo, mas é obrigatórioo uso de crazes, ele não funciona com aspas simples e nem aspas duplas. Para Strings 
+                simples sem interpolação usamos aspas simples/duplas e Strings com interpolação usamos Template Strings para 
+                utilizar o placeholder.</p>
+            <p>var s = 'JavaScript' <br>
+                'Eu estou aprendendo s' não aparece o nome JavaScript // não faz interpolação <br>
+                'Eu estou aprendendo' + s já aparece o nome JavaScript //usa concatenação <br> 
+                `Eu estou aprendendo ${s}` já aparece o nome JavaScript // usa template string <br>
+                s<strong>.length</strong> // quantos caracteres a string tem <br>
+                s<strong>.toUpperCase()</strong> // tudo para letras 'MAIÚSCULAS' <br>
+                s<strong>.toLowerCase()</strong> // tudo para letras 'minúsculas'</p>
+        <h2>Formatando Números</h2>
+            <p>Algumas formatações de números, primeriro para colocar casas decimal a mais, o segundo a trocar o ponto(.) por 
+                virgula(,) e último transforma o valor no formato de salário, para mudar a moeda do país mude o <em>currency</em> 
+                'BRL'. Da mesma maneira que o string tem vários comando 
+                de formatação o números também.</p>
+            <p>var n1 = 1542.5 <br>
+                R: 1542.5 <br>
+                n1<strong>.toFixed(</strong>2<strong>)</strong> <br>
+                R: 1542.50 <br>
+                n1<strong>.toFixed(</strong>2<strong>).replace</strong>('.' , ',') <br>
+                R:1542,50 <br>
+                n1<strong>.toLocaleString</strong><em>('pt-BR', {style: 'currency', currency: 'BRL'})</em> <br>
+                R: R$ 1,542,50</p>
+    </main>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?') //Comentários em JS na msm linha
+        window.alert('Prazer em te conhecer ' + nome + '!')
+        
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outro número'))
+        var r = n1 + n2
+        window.alert("A adição dos números foi de " + r + "!")
+
+        document.write(`${nome} seja bem-vindo(a) ao site`)//write escreve na tela, writeln escreve e pula pra linha de baixo
+    </script>
+</body>
+</html>
