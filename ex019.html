@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="ex018.html" target="_self" rel="prev" class="bp">Voltar página</a>
+            <a href="01index.html" target="_self" rel="prev" class="mp">Página principal</a>
+            <a href="ex020.html" target="_self" rel="next" class="np">Proxima página</a>
+        </nav>
+        <h1>Operadores</h1>
+    </header>
+    <main>
+        <h2>Alguns operadores</h2>
+        <ul>
+            <li>Aritméticos</li>
+            <li>Atribuição</li>
+            <li>Relacionais</li>
+            <li>Lógicos</li>
+            <li>Ternário</li>
+            <li>Typeof</li>
+        </ul>
+        <h3>Aritméticos</h3>
+            <p>Os operadores aritméticos são os sinais para fazer calculos que são +(adição), -(subtração), 
+                *(multiplicação), /(divisão real), %(divisão inteira) e **(potência). Todos esses operadores são chamados 
+                de <em>operadores binários</em>, pois precisam de 2 operandos. Diferenças entre a divisão real e a divisão 
+                inteira, a divisão real é divisão que tem o resultado quebrado (ex:5/2 = 2.5). Já a divisão inteira para 
+                antes de quebrar o resultado e o resultado é o número que sobra (ex:5%2 = 1). Lembre-se da mesma forma que 
+                na matemática existe precedência de operadores. </p>
+        <ol>Lista de Precedência
+            <li>() </li>
+            <li>**</li>
+            <li>* / % caso tenha mais de um, seguira a ordem de chegada</li>
+            <li>+ - a ordem é lida esquerda para a direita</li>
+        </ol>
+        <h4>Auto-atribuições</h4>
+            <p>Auto Atribuição: são atribuições à própria variável</p>
+            <p>Exemplo: <br>
+                var n = 3 <br>
+                n = n ** 2 <br> 
+                Então o resultado de n passa a ser o resultado do conta(16), isso é a auto-atribuição. Podemos simplificar 
+                quando a mesma variável recebe ela mesma, exemplo: n **= 2. Essa simplificação é aceita não só no JavaScript 
+                como também nas linguagens como Java, Python e PHP.</p>
+            <p>Podemos simplificar um pouco mais quando for adição(+) e subtração(-). <br>
+                Exemplo: <br>
+                var n = 5 <br>
+                n = n + 1 (R:6) <br>
+                n += 1 (R:7) <br>
+                n++ (R:8) ou n-- (R:6)<br>
+                Com isso podemos simplificar ainda mais quando for adição e subtração, na hora de aumentar ou reduzir o 
+                valor em 1.</p>
+    </main>
+</body>
+</html>
