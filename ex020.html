@@ -8,6 +8,13 @@
     <title>Dom</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="ex019.html" target="_self" rel="prev" class="bp">Voltar página</a>
+            <a href="01index.html" target="_self" rel="prev" class="mp">Página principal</a>
+            <a href="ex021.html" target="_self" rel="next" class="np">Proxima página</a>
+        </nav>
+    </header>
     <main>
         <h1>DOM</h1>
             <p>O popularmente conhecido como <abbr title="Document Object Model">DOM</abbr> é a abreviação de 
@@ -18,13 +25,61 @@
                 não funciona dentro do node.js, ele está presente quando estou rodando JavaScript dentro do meu 
                 navegador.</p>
         <h2>Árvore DOM</h2>
-            <p> Árvore <abbr title="Document Object Model">DOM</abbr> começa da raiz e essa raiz dentro do 
+            <p>Árvore <abbr title="Document Object Model">DOM</abbr> começa da raiz e essa raiz dentro do 
                 navegador é chamada de window (janela), então tudo dentro do JavaScript está dentro de um objeto 
                 chamado window (janela). Depois temos <em>Locatio</em> a localização do seu site (url), em seguida 
                 vem o <em>Document</em> o seu documento e <em>History</em> que grava a onde você estava e para onde 
                 você vai. Dentro de Document temos HTML que é pai de head e body, head que é pai de meta e title, 
                 body que é pai de h1, h2, p... E assim vai se formando uma árvore DOM. Podemos navegar dentro dessa 
                 árvore usando o DOM. Exemplo: window.document.write(window.document.URL)</p>
+        <h2>Navegando pelos elementos</h2>
+            <p>Podemos navegar pelos elementos de maneiras diferentes, elas são, por Marca, por ID, por Nome, por Classe e 
+                Seletor.</p>
+        <h3>Marca</h3>
+            <p>Por Marca fica assim <em>getElementsByTag<strong>Name</strong>()</em>, lembre-se quem em JS 
+                as letras Maiúsculas fazem muita diferenças. Perceba que que Elements está no plural, por isso ele irá 
+                aplicar a todas as tags iguais. Exemplo: window.getElementsByTagName('p'), todo o comando que eu colocar 
+                a seguir irá afetar todos os p (paragráfos), caso eu queira afetar só o primeiro paragráfo posso sem dar 
+                espaço abrir e fechar [](conchetes) e dentro dele colocar um número, como queremos selecionar o primeiro 
+                p(paragráfo) entre os [0](conchetes) coloco o número 0, caso fosse o segundo paragráfo nós colocariamos 
+                o número 2.</p>
+        <h3>ID</h3>
+            <p>Já na opção de navegar por ID podemos criar um ID para o elemento a qual queremos e escrever assim: 
+                getElementBy<strong>Id</strong>(). O ID é uma coisa única no código por isso a escreita do componente está no 
+                singular.</p>
+        <h3>Nome</h3>
+            <p>O Name é escrito no plural pois pode ter elementos com o mesmo nome, por isso em alguns casos você pode 
+                precisar usar os [](conchetes). Exemplo: getElementsBy<strong>Name</strong>().</p>
+        <h3>Classe</h3>
+            <p>Dá mesma maneira que a anterior, a Classe é plural por isso pode ser usada a varios elementos. Exemplo: 
+                getElementsBy<strong>Classe</strong>Name().</p>
+        <h3>Seletor</h3>
+            <p>O seletor é a forma mais recomendada pela maiorias dos manuais, utilizamos o query<strong>Selector</strong>() 
+                e o query<strong>SelectorAll</strong>(). O querySelector é a forma singular por assim dizer e o querySelectorAll 
+                é a forma plural, ambos aceitam a forma do CSS para encontar um elemento de #(para ID) e .(para classes).</p>
+        <h2>Eventos DOM</h2>
+            <p>Evento é tudo que possa acontecer com o elemento, geralmente o evento mais comum são os eventos de mouse, 
+                alguns são, <strong>mouseenter</strong> (quano o mouse entra dentro da área do elemento),depois vai disparar 
+                o proxímo evento <strong>mousemove</strong> (o mouse se movimentando dentro da área do elemento), outro evento 
+                é <strong>mousedown</strong> (quando clicam e seuguram), depois o <strong>mouseup</strong> (quando para de 
+                clicar), caso seja um clique rápido é chamado de <strong>click</strong> e quando o mouse saí da área do 
+                elemento é chamado de <strong>mouseout</strong>. Existe centenas de outros eventos em DOM.</p>
+        <h2>Funções</h2>
+            <p>Uma função em JavaScript, é conjunto de códigos(linhas) que só vão acontecer quando o evento ocorrer. O 
+                código fica dentro de um <em>bloco</em> e essas linhas de códigos só serão disparadas atráves de um evento, 
+                bloco em JS é delimitado entre os sinais de {}(chaves), antes de abrir o bloco devemos colocar a palavra 
+                <strong>function</strong> e em seguida dar um nome para essa função, geralmente damos o nome de acordo com 
+                a ação que será executada, funções sem nomes são conhecidas como anônimas. Exemplo: function <em>ação()</em>. 
+                Dentro desse () (parenteses) podemos colocar alguns parâmetros, pode ser um ou mais.</p>
+        <h3>Disparando eventos em HTML</h3>
+            <p>Podemos dispara eventos no <abbr title="Hyper Text Markup Language">HTML</abbr> colocando dentro da tag a 
+                palavra <em>on</em> e o nome do método, em seguida entre ""(aspas duplas) o nome da ação e ()(parenteses). 
+                Exemplo: &lt;div id="area" onclick="<em>clicar()</em>"</p>
+        <h3>Disparando eventos no JavaScript</h3>
+            <p>Temos um método no JavaScript chamado de <em>listeners</em>, que são ouvidores, eles ficam prestando atenção 
+                dentro do próprio JS. O listeners só podemos criar um evento por vez, começa assim .addEventListener, depois 
+                abre () parenteses, coloca entre ''(aspas simples) o nome do evento e depois o nome da ação. Exemplo: 
+                .addEventListener('click', clicar), não tem parenteses no nome da ação.</p>
     </main>
 </body>
 </html> 
