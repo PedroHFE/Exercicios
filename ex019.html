@@ -55,6 +55,48 @@
                 n++ (R:8) ou n-- (R:6)<br>
                 Com isso podemos simplificar ainda mais quando for adição e subtração, na hora de aumentar ou reduzir o 
                 valor em 1.</p>
+        <h3>Relacionais</h3>
+            <p>Para toda expressão que tenha um valor relacional ligada a ela, o resultado dessa expressão vai ser um 
+                valor booleano, do tipo Verdadeiro (true) ou Falso (false). Se usar operadores aritméticos na expressão 
+                primeiro resolve o aritmético e depois os relacionais mas o resultado será treu ou false.</p>
+        <ul>
+            <li>> Maior</li>
+            <li>< Menor</li>
+            <li>>= Maior ou igual</li>
+            <li><= Menor ou igual</li>
+            <li>== Igual</li>
+            <li>!= Não igual</li>
+            <li>!== Desigual restrito</li>
+            <li>=== Igualdade restrita (mesmo e o mesmo tipo)</li>
+            <p>Operadores relacionais não tem ordem de precedência.</p>
+        </ul>
+        <h3>Lógicos</h3>
+            <p>A !(Negação) é tratado como operador unário, ou seja ele só tem um operando, depois da exclamação só 
+                trabalhamos com true, false e uma expressão que o resultado será verdadeiro ou falso. Exemplo: !true 
+                R:False (Uma coisa não verdadeira, é falsa), !false R:True (Uma coisa que não é falsa, é verdadeira).</p>
+            <p>A &&(Conjunção) é um operador binário, funciona com dois operadores lógicos um de cada lado. Exemplo: 
+                true && true R:true, true && false R:false, false && true R:false e false && false R:false.</p>
+            <p>A ||(Disjunção) é um operador binário, na disjunção basta só um resultado ser verdadeiro, para a resposta 
+                ser verdadeiro. Exemplo: true || true R:true, true || false R:true, false || true R:true e false || false 
+                R:true.
+            </p>
+        <ol>
+            <li>! Negação (Não)</li>
+            <li>&& Conjunção (E)</li>
+            <li>|| Disjunção (Ou)</li>
+            <p>Já está na ordem de precedência.</p>
+        </ol>
+            <p>Ordem de precedência caso tenha operadores lógicos, aritméticos e relacionais.</p>
+        <ol>
+            <li>Aritméticos</li>
+            <li>Relacionais</li>
+            <li>Lógicos</li>
+            <li>Ternário</li>
+        </ol>
+        <h3>Ternário</h3>
+            <p>O operador ternário é dividido em 3 partes, ele usa 3 operandos. Usamos os símbolos de ? e :. Exemplo 
+                teste?true:false (dependendo do resultado do teste lógico ele vai retornar se é verdadeiro ou falso), 
+                média >= 7.0?"Aprovado":"Reprovado".</p>
     </main>
 </body>
 </html>
