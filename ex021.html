@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Condições</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="ex020.html" target="_self" rel="prev" class="bp">Voltar Página</a>
+            <a href="01index.html" target="_self" rel="prev" class="mp">Página principal</a>
+            <a href="ex022.html" target="_self" rel="next" class="np">Proxima página</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Condição</h1>
+            <p>Condição é como se fosse uma bifurcação, os códigos começam a ser lido de cima para baixo em linha reta 
+                mas dependendo pode ser criar uma bifucação ou seja dependendo do resultado que obtivermos, 
+                aparecera/executar uma ação diferente e depois volta ao fluxo normal.</p>
+            <p>O primeiro que vamos aprender é o <em>if</em> que quer dizer 'si', o segundo é o <em>else</em> que 
+                quer dizer 'se não', exemplo: if (condição) {bloco 1 }else{bloco 2 }. A bifucação é lida mais ou menos 
+                assim, <em>si</em> o resultado for verdadeiro vai ser executado os comandos do bloco 1 <em>se não</em>
+                (caso o resultado seja falso) o bloco 2 será executado.</p>
+        <h2>Condição simples</h2>
+            <p>A condição simples ela só tem um tipo de bloco, geralmente só o bloco verdadeiro. Por só ter o if e um 
+                bloco para executar se o resultado for verdadeiro, é chamado de condição simples. Exemplo: if (condição) 
+                { bloco 1}.</p>
+        <h2>Condição composta</h2>
+            <p>As condições compostas são aquelas formadas com if e else. Que executa um bloco de comandos de acordo 
+                com o resultado. Exemplo: if (condição) { bloco 1} else{ bloco 2}.</p>
+        <h2>Exercício na pratica</h2>
+        <h3>Detran</h3>
+        <label for="vel">Digite a sua velocidade<input type="number" name="velocidade" id="vel">km/h 
+            </label><input type="button"  onclick="calcularv()" value="Enviar" style="padding-right: 15px;">
+            <div id="res"></div>
+            <script>
+                function calcularv(){
+                var v = window.document.getElementById('vel')
+                v = Number(vel.value)
+                var r = window.document.querySelector('div#res')
+                r.innerHTML = `<p>A sua velocidade atual é de <strong>${v}</Strong>km/h</p>`
+                    if (v > 60){
+                        r.innerHTML += `Você ultrapassou o limite de velocidade por isso está sendo <strong>MULTADO!</strong>`
+                    }
+                r.innerHTML += '<p>Dirija sempre com cuidado!</p>'
+            }
+            </script>
+        <h3>País</h3>
+            <p>Olá, eu sou do brasil e você?</p>
+            <label for="pais">Digite o seu país de origem<input type="text" name="pais" id="pais" required minlength="3"></label>
+            <input type="button" value="Enviar" onclick="calp()" style="padding-right: 15px;">
+            <div id="resultado"></div>
+            <script>
+                function calp(){
+                    var resul = window.document.getElementById('resultado')
+                    var p = window.document.querySelector('input#pais')
+                    var pais = String(p.value)
+                    resul.innerHTML = `<p>${pais}, Legal que você é de lá!</p>`
+                    if (pais === "brasil","Brasil"){ //Use aspas dupla 
+                        resul.innerHTML += `<p>Nossa você tambem é Brasileiro!</p>`
+                    } else{
+                        resul.innerHTML += `<p>Então você estrangeiro!</p>`
+                    }
+                    resul.innerHTML += `<p>Obrigado por colaborar!</p>`
+                }
+            </script>
+        <h2>Condição Aninhada</h2>
+            <p>Condições aninhadas são uma condição composta, com outras condições dentro dela, pode ser uma condição 
+                simples ou outras condições compostas. Exemplo: if (cond1){ bloco1 (caso for verdadeiro)} else{ }if 
+                (cond2){ bloco 2 (caso for verdadeiro)}else { bloco 3 (caso o bloco 1 e 2 derem falso)}.</p>
+        <h3>Else if</h3>
+            <p>Como em JavaScript é bem comum o uso de if e else, podemos pegar o if e jogar dentro do else. 
+                Exemplo: antes if (cond1){ bloco1} else{ if (cond2){ bloco 2} } <br>
+                Exemplo: depois if (cond1){ bloco1} else if (cond2){bloco 2} <br>
+                Ao fazer isso nós economizamos a escreita de um bloco aumentando a velocidade e praticidade, pode se 
+                criar um número ilimitado de else if dentro de uma estrutura.</p>
+        <h2>Pratica else if</h2>
+        <h3>Votação</h3>
+            <label for="idade">Digite a sua idade <input type="number" name="idade" id="idade" required></label>
+            <input type="button" value="Enviar" onclick="calvoto()" style="padding-right: 15px;">
+            <div id="result"></div>
+            <script>
+                function calvoto(){
+                    var i = window.document.querySelector('input#idade')
+                    var resp = window.document.getElementById('result')
+                    var idade = Number(i.value)
+                    resp.innerHTML = `Você tem ${idade} anos`
+                    if (idade < 16){
+                        resp.innerHTML += `<p>Com a sua idade atual de ${idade}, você não pode votar.</p>`
+                    }   else if (idade < 18 || idade > 69){
+                        resp.innerHTML += `<p>Com a sua idade atual de ${idade}, seu voto é opcional.</p>`
+                        } else {
+                            resp.innerHTML += `<p>Com a sua idade atual de ${idade}, seu voto é OBRIGATÓRIO!</p>`
+                            }
+                }
+            </script>
+        <h2>Condição Multipla</h2>
+            <p>A condição multipla serve para valores fixos. Não serve muito para intervalo de valores, ela 
+                tem a possibilidade não só do "sim" e "não", ela tem a possibilidade de outros valores, de volores 
+                fixos. Não é aplicavel a todo tipo de situação mas é muito útil em situações pontuais, específicas. 
+                Só funciona com números inteiros e com caracteres (com strings).</p>
+            <p>É representado da seguinte maneira, a gente tem um comando dentro do JS, que é o <strong>switch</strong>. 
+                O switch não condição e sim uma expressão, dentro do bloco colocamos vários valores, no final tem a 
+                <em>cláusula</em> do switch que é o <em>default</em>, é como se fosse o else do switch. Se nenhum dos 
+                valores forem satisfeitos, ele vai fazer o default que é o padrão. Importante para cada bloco, é 
+                <em>preciso</em> colocar o comando <em>break</em>.</p>
+            <p>Exemplo: <strong>switch</strong>(expressão) { <br> <strong>case</strong> valor 1: <br> brack <br>
+                <strong>case</strong> valor 2: <br> break <br> <strong>case</strong>valor 3: <br> break <br> 
+                <strong>default:</strong> <br> break }</p>
+            <p>O switch vai testar essa expressão para ver se ele bate com algun dos valores. Vamos supor que essa 
+                expressão resulte no valor 2, ele vai desviar automaticamente do valor 1, e vai começar a executar os 
+                comandos que estão dentro valor 2 e no final vai bater no break. Quando ele bate no break, o fluxo é desviado 
+                para fora do switch, caso não exista o break ele vai executar todos os comandos até achar um braek.</p>
+    </main>
+</body>
+</html>
