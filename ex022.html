@@ -10,29 +10,54 @@
 <body>
     <header>
         <nav>
-
+          <a href="ex021.html" target="_self" rel="prev" class="bp"></a>
+          <a href="01index.html" target="_self" rel="prev" class="mp"></a>
+          <a href="ex023.html" target="_self" rel="next" class="np"></a>
         </nav>
     </header>
     <main>
-        em qual situação é melhor usar do while, ou apenas o while em javascript?
-A escolha entre usar "while" ou "do while" em JavaScript depende do caso específico.
-
-"While" é usado quando você quer continuar executando uma determinada ação enquanto uma condição específica for verdadeira. Por exemplo, você pode usar "while" para imprimir os números de 1 a 10:
-
-let i = 1;
-while (i <= 10) {
-  console.log(i);
-  i++;
-}
-Já "do while" é semelhante ao "while", mas garante que a ação dentro do loop seja executada pelo menos uma vez, independentemente se a condição for verdadeira ou falsa. Por exemplo, você pode usar "do while" para pedir ao usuário para digitar uma senha até que a senha correta seja digitada:
-
-do {
-  var pass = prompt("Enter your password:");
-} while (pass !== "secret");
-
-A diferença está no momento em que a condição é avaliada. No while é avaliada antes de entrar no loop, no do while é avaliada depois de entrar no loop. Isso pode ser importante dependendo da lógica do seu código.
-
-
+      <h1>Estrutura de repetições</h1>
+        <p>Estrutura de repetições também são conhecidas como laços ou interações. UM laço ele começa exatamente como uma 
+          condição, ele vai testar uma expressão e assim como acontecia nas expressões de condição eu tenho duas 
+          possibilidades: ou esse teste é verdadeiro ou é falso, só que o comportamento é diferente. Se essa condição, esse 
+          teste lógico for verdade ele vai executar um bloco só que ele não vai seguir desse bloco para o final, ele vai 
+          voltar e vai fazer um <em>looping</em>, vai fazer um <em>laço</em>, uma <em>repetição</em>. Enquanto o resultado 
+          do teste lógico for verdadeiro ele vai continuar voltando e fazendo o looping até o resultado ser falso.</p>
+        <p>Existe outras estruturas de repetições mas essa descrita é mais usada e a primeira á ser ensinada, ela tem um 
+          nome é chamada de <strong>While</strong>(enquanto), ela é classificada como estrutura de repetição com teste lógico 
+          no início, isso porque ele faz o teste e sendo verdadeiro ele faz o bloco. Além do while também temos o 
+          <strong>Do while</strong>, que é muito parecido com o while mas diferença está que ele primeiro executa o bloco e 
+          depois faz o teste, em seguida a linha de raciocínio é igual, se o teste lógico for verdadeiro ele faz o looping 
+          e executa o bloco de novo e vai ficar nesse looping até o resultado ser falso.</p>
+      <h2>While e Do While</h2>
+        <p>Qual situação é melhor usar do while, ou apenas o while em javascript?
+          A escolha entre usar "while" ou "do while" em JavaScript depende do caso específico. "While" é usado quando você 
+          quer continuar executando uma determinada ação enquanto uma condição específica for verdadeira. Por exemplo, 
+          você pode usar "while" para imprimir os números de 1 a 10:</p>
+        <p>let i = 1; <br>
+          <strong>while</strong> (i <= 10) { <br>
+            console.log(i); <br>
+            i++; }</p>
+        <p>Já "do while" é semelhante ao "while", mas garante que a ação dentro do loop seja executada pelo menos uma vez, 
+          independentemente se a condição for verdadeira ou falsa. Por exemplo, você pode usar "do while" para pedir ao 
+          usuário para digitar uma senha até que a senha correta seja digitada:</p>
+        <p><strong>do</strong> { <br>
+          var pass = prompt("Enter your password:"); <br>
+          } while (pass !== "secret");</p>
+        <p>A diferença está no momento em que a condição é avaliada. No while é avaliada antes de entrar no loop, no do 
+          while é avaliada depois de entrar no loop. Isso pode ser importante dependendo da lógica do seu código.</p>
+      <h2>For</h2>
+        <p>A estrutura de repetição com variável de controle, essa estrutura ela é composta por 3 coisas: inicialização, 
+          teste lógico e o incremento. Na primeira passagem, ele faz a inicialização e o teste lógico. Sendo esse teste 
+          verdadeiro, ele vai executar o bloco, e nesse bloco pode ter um ou vários comandos, só que no momento do 
+          looping, ele também vai fazer o incremento. O teste é feito mais uma vez, então sendo verdadeiro ele repete a 
+          execução do bloco e looping acontecerá novamente. Cada vez que voltar acontecerá um incremento até o teste 
+          lógico ficar falso. O comando em questão é o <strong>for (</strong>inicio<strong>;</strong>teste<strong>;</strong>
+          incr<strong>)</strong>{bloco}. Dentro de um <em>for</em> podemos colocar um while, um do...while, um if, um else 
+          if, um switch... Muitos programadores, preferem utilizar o for para a grande maioria das vezes em que eu sei os 
+          limites das minha execuções. Exemplo:</p>
+          <p>for(var c=1;c<=3;c++){consol.log('c')} <br> 
+          R: 1 2 3</p>
     </main>
 </body>
 </html>
