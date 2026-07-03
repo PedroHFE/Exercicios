@@ -1,2 +1,0 @@
-# Exercicios
- Exercícios do curso

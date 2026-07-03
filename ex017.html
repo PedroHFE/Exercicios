@@ -1,71 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>JavaScript</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="ex016.html" target="_self" rel="prev" class="bp">Voltar página</a>
-            <a href="01index.html" target="_self" rel="prev" class="mp">Página principal</a>
-            <a href="ex018.html" target="_self" rel="next" class="np">Proxima página</a>
-        </nav>
-    </header>
-    <main>
-        <h1>JavaScript</h1>
-        <h2>Variáveis</h2>
-            <p>No javascript, além de utilizar a palavra <strong>var</strong>, também pode usar a palavra <strong>let</strong> e 
-                o nome <em>const</em>. O sinal de =(igual) é lido como <em>recebe</em>. Quando se coloca um valores dentro de uma 
-                variável é chamado de <em>atribuição</em>, quando você atribui uma cadeia de caracteres é conhecido como <em>string</em>, 
-                é aceito 3 tipos de aspas que são aceitas em JS, são: ""(aspas duplas), ''(aspas simples) e ``(crases). Existe diferenças 
-                para o JS de cada uma mas veremos mais para frente.</p>
-            <p>Os nomes das variáveis são chamados de <em>identificadores</em>, egistem algumas regras para os nomes dos identificadores. 
-                Elas são:</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../favicon_io/favicon-16x16.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <title>Flexs Box</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="ex016.html" target="_self" rel="prev" class="bp">Voltar página</a>
+                <a href="01index.html" target="_self" rel="prev" class="mp">Página principal</a>
+                <a href="ex018.html" target="_self" rel="next" class="np">Proxima página</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h1>FlexBox</h1>
+                <p>O Flexbox é um modelo de layout do CSS3 que permite criar layouts flexíveis e responsivos de forma mais fácil e eficiente. Ele foi projetado para lidar com a distribuição de espaço entre os itens em um contêiner, mesmo quando seu tamanho é desconhecido ou dinâmico.</p>
+                <p>funciona de forma semelhante à água em um recipiente. Ele é desenhado para ser fluido e se adaptar automaticamente ao tamanho do seu contêiner (o elemento pai), resolvendo problemas de responsividade que métodos antigos não conseguiam.</p>
+                <h2>Conceitos básicos (Identificação do Pai e Filhos)</h2>
+                <p>O Flexbox funciona com base em dois eixos: o eixo principal (main axis) e o eixo transversal (cross axis). O eixo principal é definido pela direção dos itens dentro do contêiner flexível, enquanto o eixo transversal é perpendicular ao eixo principal.</p>
+                <p>Contêiner (Pai): É onde você aplica a propriedade display: flex;. Ele é o responsável por controlar o comportamento do layout. <br>
+                Itens (Filhos): São os elementos dentro do contêiner. Eles não recebem o display: flex;, mas sim outras propriedades que definem como eles se comportam dentro do pai.</p>
+                <h2>Propriedades do Flexbox</h2>
                 <ul>
-                    <li>É possível usar <em>letras</em> ou <em>números</em></li>
-                    <li>É possível usar <em>acentos</em> e <em>símbolos</em></li>
-                    <li>Podem começar com <em>$</em> ou <em>_</em></li>
-                    <li>Não podem começar com <em>números</em></li>
-                    <li>Não podem conter <em>espaços</em></li>
-                    <li>Não podem ser <em>palavras reservadas</em> (Ex: Function, var, let...)</li>
+                    <li><strong>display: flex;</strong> - Define um contêiner como flexível.</li>
+                    <li><strong>flex-direction:</strong> - Define a direção dos itens (row, column, row-reverse, column-reverse).</li>
+                    <li><strong>justify-content:</strong> - Alinha os itens ao longo do eixo principal (flex-start, flex-end, center, space-between, space-around).</li>
+                    <li><strong>align-items:</strong> - Alinha os itens ao longo do eixo transversal (flex-start, flex-end, center, baseline, stretch).</li>
+                    <li><strong>flex-wrap:</strong> - Define se os itens devem quebrar para a próxima linha (nowrap, wrap, wrap-reverse).</li>
+                    <li><strong>align-content:</strong> - Alinha as linhas do contêiner quando há espaço extra no eixo transversal.</li>
                 </ul>
-            <p>Dicas para criar nomes de variáveis.</p>
+                <h2>Aplicação prática</h2>
+                <p>Para ativar o Flexbox em um elemento, use no CSS:<br> .container { display: flex; }.
+                Para fazer com que os itens internos sejam fluidos e ocupem o espaço disponível, utilize: .item {flex: auto; }.<br> 
+                Flexibilidade: Diferente de layouts tradicionais (display: block ou inline-block), o Flexbox permite alinhar elementos horizontal ou verticalmente com muito mais facilidade e sem quebrar o layout quando a tela é redimensionada. <br> 
+                A seguir está um exemplo simples de como usar o Flexbox para criar um layout de três colunas:</p>
+                <pre><code>
+                    .container {
+                        display: flex;
+                    }
+            </section>
+            <section>
+                <h2>Direções e Eixos Flexbox CSS</h2>
+                <p>São dois pilares fundamentais do Flexbox: a configuração de direções (flex-direction) e a compreensão dos eixos (main axis e cross axis).
+                Aqui estão os pontos principais:</p>
+
+                <h2>Flex-direction</h2>
+                <p>A propriedade flex-direction (Configurada no elemento Pai/Contêiner) define a direção
+                na qual os itens flexíveis são colocados no contêiner. Ela pode assumir quatro valores principais:</p>
                 <ul>
-                    <li><em>Maiúsculas</em> e <em>Minúsculas</em> fazem diferença</li>
-                    <li>Tente escolher <em>nomes coerentes</em> para as variáveis</li>
-                    <li>Evite se tornar um <em>programador alfabeto</em>(a,b,c,d...) ou um <em>programador contador</em>(n1,n2.n3,...)</li>
+                    <li>- row (Padrão): Linha deitada, da esquerda para a direita.</li>
+                    <li>- row-reverse: Linha deitada, da direita para a esquerda.</li>
+                    <li>- column (Padrão): Coluna em pé, de cima para baixo.</li>
+                    <li>- column-reverse: Coluna em pé, de baixo para cima.</li>
                 </ul>
-            <h2>Tipos primitivos (primordiais)</h2>
-            <h3>Number</h3>
-                <p>O JS não faz diferenciasão de números mas existe diferenças entre números inteiros (-15, 8, 31) que não 
-                    são fracionados e os números reais chamados de <em>float</em>, outras linguagens de programação fazem 
-                    diferenciasão.</p>
-            <h3>String</h3>
-                <p>São cadeias de caracteres, que podem ser um conjunto de números por exemplo o CPF,RG, Telefone... pois eles 
-                    tem traço, ponto e etc.</p>
-            <h3>Boolean</h3>
-            <p>True (verdadeiro) e False (falso), são conhecidos como valores booleanos.</p>
-            <ul>Tipos primitivos
-                <li>Number <ul>
-                    <li>Infinity</li>
-                    <li>NaN (Not a Number)</li></ul></li>
-                <li>String</li>
-                <li>Boolean</li>
-                <li>Undefined</li>  
-                <li>Object <ul>
-                    <li>Null</li>
-                    <li>Array</li></ul></li>
-                <li>Function</li>
-            </ul>
-                <p>Para trabalhar com os Data Types(tipos primitivos) usamos o comando <em>typeos</em>(tipo de). Pode se criar 
-                    uma variálvel e pedir o typeof(tipo de) dela, como também colocar o valor <em>literal</em>, o JS 
-                    chama de <em>literal</em> quer que é literalmente. Quando se cria uma variálvel você não define um tipo 
-                    primitivo, você diz que ela é uma variálvel, é um espaço. Pode aumentar e diminuir conforme o programa for 
-                    rodando.</p>
-    </main>
-</body>
+                <img src="img/FlexboxAxis.jpg" alt="Exemplo de Flex-direction" style="max-width: 100%; height: auto;">
+                <h2>Entendendo os Eixos</h2>
+                <p>O Flexbox trabalha com dois eixos principais que determinam como os itens são dispostos dentro do contêiner, cada 
+                configuração de direção altera o posicionamento dos eixos, que são cruciais para o alinhamento (justify-content e align-items):</p>
+                <ul>
+                    <li>- Main Axis (Eixo Principal): É a direção principal onde os itens são
+                    enfileirados. Possui os pontos Main-start (início) e Main-end (fim).</li>
+                    <li>- Cross Axis (Eixo Transversal): É o eixo perpendicular ao principal.
+                    Possui os pontos Cross-start e Cross-end.</li>
+                </ul>
+                Compreender essas direções e eixos é essencial para controlar o layout dos elementos
+                dentro de um contêiner flexível. Ao manipular essas propriedades, você pode criar
+                layouts responsivos e adaptáveis de maneira eficiente.</p>
+                <img src="img/FlexboxAxis2.jpg" alt="Exemplo de Eixos Flexbox" style="max-width: 100%; height: auto;">
+            </section>
+            <section>
+                <h2>Empacotamento e fluxo no Flexbox CSS</h2>
+                <p>A propriedade flex-wrap (Configurada no elemento Pai/Contêiner) define se os itens flexíveis devem ser empacotados em uma única linha ou em múltiplas linhas, o encolhimento dos itens dentro de um Flexbox vai depender muito do conteúdo que existe nele. Com a propriedade <em>nowrap</em> significa "ó não quebra", não faz que os blocos saiam da sequência que foi ordenada. Agora a propriedade <em>wrap</em> vai quebrar (encapsulamento) ele no sentido transversal do <strong>Cross Axis</strong>, a quebra do <em>wrap</em> é <strong>sempre</strong> no sentido do eixo transversal.</p>
+                <p>Agora a propriedade <em>wrap-reverse</em> vai quebrar (encapsulamento) no oposto do <strong>Cross Axis</strong>, a quebra do <em>wrap-reverse</em> é <strong>sempre</strong> no sentido contario do eixo transversal. Ela pode assumir três valores principais:</p>
+                <ul>
+                    <li>- nowrap (Padrão): Os itens não quebram de linha e tentam encolher conforme o conteúdo. Não tem hífen.</li>
+                    <li>- wrap: Permite que os itens quebrem para a próxima linha (ou coluna) no sentido do eixo transversal (Cross Axis).</li>
+                    <li>- wrap-reverse:  Os itens quebram no sentido oposto ao eixo transversal.</li>
+                </ul>
+                <img src="img/FlexboxWrap.jpg" alt="Exemplo de Flex-wrap" style="max-width: 100%; height: auto;">
+                <img src="img/FlexboxWrap2.jpg" alt="Exemplo de Flex-wrap-reverse" style="max-width: 100%; height: auto;">
+                <p>Pode usar uma shorthand para definir as propriedades flex-wrap, flex-direction e flex-flow em uma única declaração. O <em>flex-flow</em> que combina <em>flex-direction</em> e <em>flex-wrap</em>, inclusive é uma indicação da W3C usar flex-flow no lugar de definir as duas propriedades separadamente. Por exemplo.:</p>
+                <pre><code>
+                    .container {
+                        display: flex;
+                        flex-flow: row wrap;
+                    }
+                    <pre><code>
+                    .container {
+                        display: flex;
+                        flex direction: row;
+                        flex-wrap: wrap;
+                    }
+                </code></pre>
+            </section>
+        </main>
+    </body>
 </html>

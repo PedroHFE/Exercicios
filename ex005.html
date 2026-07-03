@@ -15,10 +15,11 @@
             Significa que vai mudar de imagem a partir do minimo da largura, preferivel colocar apartir do <br>
             maximo de largura(não esqueça de contar os 50px da barra de rolagem).</p> 
         <p>Na SRCSET não dá para usar o atlho CRTL + ESPAÇO.</p>
+        <p>Desativei as imagens para não atrapalhar a leitura do conteúdo.</p>
         <picture><!--Vou destivar as imagens para colocar o conteudo dos audios -->
-            <source media="(max-width:750px )" srcset="/Imagens/anao.png" type="image/png">
-            <source media="(max-width:1050px )" srcset="/Imagens/adolecente.png" type="image/png">
-            <img src="/Imagens/adulto.jp" alt="imagem flexível">
+            <source media="(max-width:550px )" srcset="../Imagens/anao.png" type="image/png">
+            <source media="(max-width:850px )" srcset="../Imagens/adolecente.png" type="image/png">
+            <img src="../Imagens/adulto.png" alt="imagem flexível"> <!--A imagem é jpg mas vou colocar outro caminho para ela não aparecer-->
         </picture>
     <h2>Audios</h2>
     <h3>Atributos da tag AUDIO</h3>
@@ -197,9 +198,7 @@
     </p>
     <p>Estes videos estão hospedados externamnete no YouTube e no Vimeo.</p>
     <P>
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/eoY1Mc70uTo?si=u8LYa1VFYPhwy50U"
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-        encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=gm0BI1Gn7xs&list=PLHz_AreHm4dm24MhlWJYiR_Rm7TFtvs6S&index=49" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <iframe src="https://player.vimeo.com/video/58281021?h=48af2a4a6d&portrait=0" width="640" height="360"
         frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
         </iframe>
