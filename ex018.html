@@ -16,7 +16,59 @@
         </nav>
     </header>
     <main>
-        <section></section>
+        <h1>Alinhamento nos eixos Flexbox</h1>
+        <p>O alinhamento no Flexbox é fundamentado na compreensão dos <strong>eixos principal (Main Axis)</strong> e <strong>transversal (Cross Axis)</strong>, cujas direções dependem da propriedade flex-direction definida no container.</p>
+        <section>
+            <h2>Alinhamento no Eixo Principal</h2>
+            <p>O alinhamento no eixo principal (Main Axis) é controlado pela propriedade <em>justify-content</em>. Diferente do que muitos pensam, esse alinhamento não é obrigatoriamente horizontal; ele segue a direção definida por <em>flex-direction</em>. Se a direção for <em>row</em>, o alinhamento é horizontal; se for <em>column</em>, o alinhamento é vertical.</p>
+            <h2>Comportamentos de Alinhamento</h2>
+            <p>Os principais valores e seus impactos visuais são:</p>
+            <ul>
+                <li><strong>Flex-start (Padrão)</strong>: Os itens são agrupados no início do eixo principal (Main Start). Todo o espaço em branco sobra no final do container.</li>
+                <li><strong>Flex-end</strong>: Os itens são empurrados para o final do eixo (Main End), deixando o espaço vazio no início.</li>
+                <li><strong>Center</strong>: Os itens ficam centralizados no meio do eixo principal, com espaços iguais distribuídos nas duas extremidades.</li>
+                <li><strong>Space-between</strong>: O primeiro item é colado no Main Start e o último no Main End. O espaço disponível é dividido de forma idêntica apenas entre os itens intermediários.</li>
+                <li><strong>Space-evenly</strong>: É considerado o mais simétrico, pois cria espaçamentos exatamente iguais entre todos os itens, inclusive antes do primeiro e depois do último elemento.</li>
+                <li><strong>Space-around</strong>:  Distribui o espaço de forma que cada item tenha a mesma quantidade de espaço ao seu redor. Na prática, isso faz com que o espaço entre dois itens seja o dobro do espaço nas extremidades (início e fim) do container.</li>
+            </ul>
+            <img src="img/fbJustifyContent.jpg" alt="Exemplo de Justify-content" style="max-width: 50%; height: auto;">
+            <img src="img/fbJustifyContent2.jpg" alt="Exemplo de Justify-content" style="max-width: 50%; height: auto;">
+        </section>
+        <section>
+            <h2>Alinhamento no Eixo Transversal</h2>
+            <p>O alinhamento no eixo transversal (Cross Axis) é o que define como os itens se posicionam na direção perpendicular ao fluxo principal. Se o container estiver em row (linha), o eixo transversal será vertical; se estiver em column (coluna), ele será horizontal.<br>
+            Existem três propriedades fundamentais para controlar esse alinhamento: align-items, align-content e align-self.</p>
+            <h2>Alinhamento de Itens Individuais (<em>align-items</em>)</h2>
+            <p>Esta propriedade é configurada no container pai e dita o comportamento padrão de todos os seus filhos dentro de uma única linha.</p>
+            <ul>
+                <li><strong>Stretch (Padrão)</strong>: Diferente do eixo principal, o valor padrão aqui é o "esticar". Se os itens não tiverem um tamanho fixo, eles se expandirão para ocupar toda a dimensão do eixo transversal do container.</li>
+                <li><strong>Flex-start</strong>: Alinha os itens no início do eixo transversal (Cross Start).</li>
+                <li><strong>Flex-end</strong>: Alinha os itens no final do eixo transversal (Cross End).</li>
+                <li><strong>Center</strong>: Centraliza os itens no meio do eixo transversal.</li>
+            </ul>
+            <p>Importante: O align-items não possui opções de espaçamento como space-between ou space-around.</p>
+            <h2>Alinhamento de Conteúdo Empacotado (<em>align-content</em>)</h2>
+            <p>Esta propriedade também é aplicada ao container pai, mas só funciona quando há quebra de linha (uso de flex-wrap: wrap ou wrap-reverse). Ela não alinha os itens individualmente, mas sim as linhas de itens como um todo.</p>
+            <ul>
+                <li><strong>Stretch (Padrão)</strong>: Distribui as linhas para que ocupem toda a altura disponível, esticando os itens se necessário.</li>
+                <li><strong>Flex-start</strong>: Todas as linhas são agrupadas no início do eixo transversal.</li>
+                <li><strong>Flex-end</strong>: Todas as linhas são agrupadas no final do eixo transversal.</li>
+                <li><strong>Center</strong>: Todas as linhas são centralizadas no meio do eixo transversal.</li>
+                <li><strong>Space-between</strong>: A primeira linha é colada no Cross Start e a última no Cross End, com o espaço restante distribuído igualmente entre as linhas intermediárias.</li>
+                <li><strong>Space-around</strong>: Distribui o espaço de forma que cada linha tenha a mesma quantidade de espaço ao seu redor, resultando em espaçamentos iguais entre as linhas e nas extremidades do container.</li>
+            </ul>
+            <p>Distribuição de espaço: Diferente do align-items, aqui você pode usar space-between, space-around e space-evenly para gerenciar o espaço entre as linhas de conteúdo.</p>
+            <h2> Alinhamento Individual (<em>align-self</em>)</h2>
+            <p>O align-self é uma propriedade aplicada diretamente ao item filho. Ela permite que um elemento específico ignore a regra de align-items definida pelo pai e assuma um alinhamento próprio no eixo transversal. Os valores são os mesmos do align-items (flex-start, flex-end, center, stretch), com a adição do valor auto, que herda o comportamento definido no pai.</p>
+            <h3>Resumo de Diferenciação</h3>
+            <p>Para não confundir as propriedades, lembre-se desta lógica:</p>
+            <ul>
+                <li><strong>justify-content</strong>: Controla o alinhamento dos itens no eixo principal do container.</li>
+                <li><strong>align-items</strong>: Controla o alinhamento dos itens no eixo transversal do container (em uma linha).</li>
+                <li><strong>align-content</strong>: Controla o alinhamento das linhas de itens quando há quebra de linha (quando há várias linhas/empacotamento).</li>
+                <li><strong>align-self</strong>: Controla o alinhamento individual de um item específico no eixo transversal (sobrepondo o pai).</li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>
