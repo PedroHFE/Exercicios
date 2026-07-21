@@ -55,9 +55,18 @@
                 <li><strong>Flex-end</strong>: Todas as linhas são agrupadas no final do eixo transversal.</li>
                 <li><strong>Center</strong>: Todas as linhas são centralizadas no meio do eixo transversal.</li>
                 <li><strong>Space-between</strong>: A primeira linha é colada no Cross Start e a última no Cross End, com o espaço restante distribuído igualmente entre as linhas intermediárias.</li>
+                <li><strong>Space-evenly</strong>: Distribui o espaço de forma que cada linha tenha espaçamentos iguais entre si e nas extremidades do container.</li>
                 <li><strong>Space-around</strong>: Distribui o espaço de forma que cada linha tenha a mesma quantidade de espaço ao seu redor, resultando em espaçamentos iguais entre as linhas e nas extremidades do container.</li>
             </ul>
             <p>Distribuição de espaço: Diferente do align-items, aqui você pode usar space-between, space-around e space-evenly para gerenciar o espaço entre as linhas de conteúdo.</p>
+            <img src="img/fbacstretch.jpg" alt="Exemplo de align-content Stretch" style="max-width: 25%; height: auto;">
+            <img src="img/fbacflexstart.jpg" alt="Exemplo de align-content Flex-start" style="max-width: 25%; height: auto;">
+            <img src="img/fbacflexend.jpg" alt="Exemplo de align-content Flex-end" style="max-width: 25%; height: auto;">
+            <img src="img/fbaccenter.jpg" alt="Exemplo de align-content Center" style="max-width: 25%; height: auto;">
+            <img src="img/fbacspacebetween.jpg" alt="Exemplo de align-content Space-between" style="max-width: 25%; height: auto;">
+            <img src="img/fbacspaceevenly.jpg" alt="Exemplo de align-content Space-evenly" style="max-width: 25%; height: auto;">
+            <img src="img/fbacspacearoud.jpg" alt="Exemplo de align-content Space-around" style="max-width: 25%; height: auto;">
+
             <h2> Alinhamento Individual (<em>align-self</em>)</h2>
             <p>O align-self é uma propriedade aplicada diretamente ao item filho. Ela permite que um elemento específico ignore a regra de align-items definida pelo pai e assuma um alinhamento próprio no eixo transversal. Os valores são os mesmos do align-items (flex-start, flex-end, center, stretch), com a adição do valor auto, que herda o comportamento definido no pai.</p>
             <h3>Resumo de Diferenciação</h3>
@@ -68,6 +77,10 @@
                 <li><strong>align-content</strong>: Controla o alinhamento das linhas de itens quando há quebra de linha (quando há várias linhas/empacotamento).</li>
                 <li><strong>align-self</strong>: Controla o alinhamento individual de um item específico no eixo transversal (sobrepondo o pai).</li>
             </ul>
+            <p><strong>justify-content</strong>: Alinha os itens ao longo do <strong>eixo principal</strong> (main axis). É utilizado para distribuir o espaço disponível entre ou ao redor dos itens na direção em que eles estão dispostos (por exemplo, horizontalmente em flex-direction: row).</p>
+            <p><strong>align-items</strong>: Alinha os itens ao longo do <strong>eixo transversal</strong> (cross axis). Ele controla como os itens são posicionados dentro de suas respectivas linhas ou dentro do container, caso não haja quebra de conteúdo.</p>
+            <p><strong>align-content</strong>: Alinha as <strong>linhas de conteúdo empacotado</strong> ao longo do <strong>eixo transversal</strong>. Esta propriedade só surte efeito quando o container possui múltiplas linhas (ou seja, quando o flex-wrap está definido como wrap ou wrap-reverse) e existe espaço livre no eixo transversal para distribuir entre essas linhas.</p>
+            <p><strong>align-self</strong>: Alinha um item específico ao longo do <strong>eixo transversal</strong> (cross axis). Esta propriedade permite que um item ignore a regra de align-items definida pelo pai e assuma um alinhamento próprio.</p>
         </section>
     </main>
 </body>
